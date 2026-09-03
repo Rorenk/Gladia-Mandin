@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://b1n40dr8cni1o"]
+
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="1_xdrx3"]
+[ext_resource type="Texture2D" uid="uid://blacovkee00n2" path="res://assets/sprites/creatures/adachimon.png" id="1_yr7hp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osop1"]
+atlas = ExtResource("1_yr7hp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wwjk"]
+atlas = ExtResource("1_yr7hp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7t3ym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osop1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wwjk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_xdrx3")
+creature_name = "Adachimon"
+creature_sprite_sheet = SubResource("SpriteFrames_7t3ym")
+creature_form = 1
+creature_hp = 120
+creature_speed = 40
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

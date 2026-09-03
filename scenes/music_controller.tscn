@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cvlall41eb1bj"]
+
+[ext_resource type="Script" uid="uid://n1bgb3f4lel5" path="res://scripts/music_controller.gd" id="1_6y0h0"]
+[ext_resource type="AudioStream" uid="uid://dllt3m314wg13" path="res://assets/audio/music/MainMenuOST.mp3" id="2_7bf0p"]
+
+[node name="MusicController" type="Node2D" unique_id=224225523]
+script = ExtResource("1_6y0h0")
+
+[node name="bgmusic" type="AudioStreamPlayer" parent="." unique_id=1585853378]
+stream = ExtResource("2_7bf0p")
+volume_db = -19.5
+bus = &"Music"

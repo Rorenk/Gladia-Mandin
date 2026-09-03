@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cx77as14hqrh7"]
+
+[ext_resource type="Script" uid="uid://gf8kn8eytkxw" path="res://scripts/opções.gd" id="1_44s3n"]
+
+[node name="Opções" type="Node2D" unique_id=1036465720]
+script = ExtResource("1_44s3n")
+
+[node name="SoundMasterSlider" type="HSlider" parent="." unique_id=934617800]
+offset_left = 203.0
+offset_top = 25.0
+offset_right = 617.0
+offset_bottom = 63.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1047482537]
+offset_left = 205.0
+offset_top = 96.0
+offset_right = 613.0
+offset_bottom = 141.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SoundMasterText" type="TextEdit" parent="." unique_id=830889157]
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 186.0
+offset_bottom = 63.0
+text = "      SOM GLOBAL"
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=193061382]
+offset_left = 202.0
+offset_top = 175.0
+offset_right = 610.0
+offset_bottom = 203.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicText" type="TextEdit" parent="." unique_id=1564266917]
+offset_left = 6.0
+offset_top = 90.0
+offset_right = 195.0
+offset_bottom = 130.0
+text = "            MUSICA"
+
+[node name="SFXText" type="TextEdit" parent="." unique_id=135054973]
+offset_left = 10.0
+offset_top = 160.0
+offset_right = 195.0
+offset_bottom = 199.0
+text = "               SFX"
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=342513747]
+offset_left = 1.0
+offset_top = 309.0
+offset_right = 125.0
+offset_bottom = 353.0
+text = "Voltar"
+
+[node name="ButtonSoundTest" type="Button" parent="." unique_id=2077878694]
+offset_left = 505.0
+offset_top = 311.0
+offset_right = 632.0
+offset_bottom = 356.0
+text = "Testar"
+
+[node name="OptionButtonResolução" type="OptionButton" parent="." unique_id=2080472678]
+offset_left = 11.0
+offset_top = 226.0
+offset_right = 195.0
+offset_bottom = 253.0
+
+[node name="CheckBoxTelaCheia" type="CheckBox" parent="." unique_id=1894407817]
+offset_left = 214.0
+offset_top = 269.0
+offset_right = 238.0
+offset_bottom = 293.0
+
+[node name="TelaCheiaText" type="TextEdit" parent="." unique_id=1102622991]
+offset_left = 13.0
+offset_top = 261.0
+offset_right = 198.0
+offset_bottom = 300.0
+text = "               Fullscreen"
+
+[connection signal="value_changed" from="SoundMasterSlider" to="." method="_on_slider_master_value_changed"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_slider_musica_value_changed"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_slider_sfx_value_changed"]
+[connection signal="pressed" from="ButtonVoltar" to="." method="_on_button_voltar_pressed"]
+[connection signal="pressed" from="ButtonSoundTest" to="." method="_on_button_sound_test_pressed"]
+[connection signal="item_selected" from="OptionButtonResolução" to="." method="_on_option_button_resolução_item_selected"]
+[connection signal="toggled" from="CheckBoxTelaCheia" to="." method="_on_check_box_tela_cheia_toggled"]

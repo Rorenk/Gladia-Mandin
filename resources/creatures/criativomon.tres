@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://cj18jaowxlmyc"]
+
+[ext_resource type="Texture2D" uid="uid://d05eo4rh42voa" path="res://assets/sprites/creatures/Sprite-0001.png" id="1_tgjod"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_u8oas"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpqvj"]
+atlas = ExtResource("1_tgjod")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv8dh"]
+atlas = ExtResource("1_tgjod")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2cbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpqvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv8dh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_u8oas")
+creature_name = "maiscriativomon"
+creature_sprite_sheet = SubResource("SpriteFrames_b2cbg")
+creature_form = 2
+creature_hp = 100
+creature_speed = 100
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

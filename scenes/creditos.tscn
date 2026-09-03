@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ch1lkidf53yui"]
+
+[ext_resource type="Script" uid="uid://b1rwbyrhciqdg" path="res://scripts/creditos.gd" id="1_lgbdq"]
+[ext_resource type="Texture2D" uid="uid://dbhnt7mpisyxh" path="res://assets/sprites/placeholders/stock02.jpg" id="2_lgbdq"]
+[ext_resource type="Texture2D" uid="uid://c7281ijt31di7" path="res://assets/sprites/placeholders/stock03.jpg" id="3_ul0vb"]
+[ext_resource type="Texture2D" uid="uid://blcgqgtxksnl7" path="res://assets/sprites/placeholders/stock01.jpg" id="4_idjxt"]
+
+[node name="Creditos" type="Node2D" unique_id=675469935]
+script = ExtResource("1_lgbdq")
+
+[node name="Eu" type="Sprite2D" parent="." unique_id=236252862]
+position = Vector2(101.000015, 173.00002)
+scale = Vector2(0.23057146, 0.29708755)
+texture = ExtResource("2_lgbdq")
+
+[node name="Tu" type="Sprite2D" parent="." unique_id=1766924096]
+position = Vector2(309.00003, 176.99998)
+scale = Vector2(0.22182563, 0.3017242)
+texture = ExtResource("3_ul0vb")
+
+[node name="Ele" type="Sprite2D" parent="." unique_id=827987775]
+position = Vector2(512, 181.99998)
+scale = Vector2(0.112151764, 0.13734159)
+texture = ExtResource("4_idjxt")
+
+[node name="Button" type="Button" parent="." unique_id=1330201169]
+offset_left = 11.0
+offset_top = 309.0
+offset_right = 174.0
+offset_bottom = 353.0
+text = "Voltar"
+
+[connection signal="pressed" from="Button" to="." method="_on_voltar_button_pressed"]

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://bc3hog04n8mwb"]
+
+[ext_resource type="Texture2D" uid="uid://bidrwitv0k2bg" path="res://assets/sprites/creatures/israelmon.png" id="1_brf0f"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_o2uan"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brf0f"]
+atlas = ExtResource("1_brf0f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2uan"]
+atlas = ExtResource("1_brf0f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yi1d6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brf0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2uan")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_o2uan")
+creature_name = "Israelmon"
+creature_sprite_sheet = SubResource("SpriteFrames_yi1d6")
+creature_form = 1
+creature_hp = 160
+creature_speed = 300
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

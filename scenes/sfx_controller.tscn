@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c32nq4wrq5gi2"]
+
+[ext_resource type="Script" uid="uid://f3ndos81by5b" path="res://scripts/sfx_controller.gd" id="1_hqkfj"]
+[ext_resource type="AudioStream" uid="uid://b8xgfsfnfg2qu" path="res://assets/audio/sfx/sair.mp3" id="2_klwgo"]
+
+[node name="SFXController" type="Node2D" unique_id=1203420872]
+script = ExtResource("1_hqkfj")
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=397082374]
+stream = ExtResource("2_klwgo")
+bus = &"SFX"

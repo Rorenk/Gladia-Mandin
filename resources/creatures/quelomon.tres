@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://biqonvl1kmjg0"]
+
+[ext_resource type="Texture2D" uid="uid://duni0lb3jytvd" path="res://assets/sprites/creatures/quelomon.png" id="1_pqt1w"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_6tx8o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqt1w"]
+atlas = ExtResource("1_pqt1w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tx8o"]
+atlas = ExtResource("1_pqt1w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjqav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqt1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tx8o")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_6tx8o")
+creature_name = "Quelomon"
+creature_sprite_sheet = SubResource("SpriteFrames_xjqav")
+creature_form = 1
+creature_hp = 160
+creature_speed = 100
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

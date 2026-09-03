@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://2y5rwquyt836"]
+
+[ext_resource type="Script" uid="uid://dgtw6g5qo6uwi" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Node2D" unique_id=1735975358]
+script = ExtResource("1_l6cm7")
+
+[node name="Button_Manager" type="Control" parent="." unique_id=142715796]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -36.0
+offset_top = 13.0
+offset_right = -5.0
+offset_bottom = 43.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button_Manager" unique_id=401716768]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -8.0
+anchor_top = -0.75000006
+anchor_right = -8.0
+anchor_bottom = -0.75000006
+offset_left = 301.0
+offset_top = 69.5
+offset_right = 898.0
+offset_bottom = 285.5
+theme_override_constants/separation = 30
+
+[node name="Jogar" type="Button" parent="Button_Manager/VBoxContainer" unique_id=773909714]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Opções" type="Button" parent="Button_Manager/VBoxContainer" unique_id=491200159]
+layout_mode = 2
+text = "Opções"
+
+[node name="Sair" type="Button" parent="Button_Manager/VBoxContainer" unique_id=1974948117]
+layout_mode = 2
+text = "Sair"
+
+[node name="Creditos" type="Button" parent="Button_Manager/VBoxContainer" unique_id=456129629]
+layout_mode = 2
+text = "Creditos"
+
+[connection signal="pressed" from="Button_Manager/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Button_Manager/VBoxContainer/Opções" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="Button_Manager/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Button_Manager/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]

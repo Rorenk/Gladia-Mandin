@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://ywyfxk3d5p0"]
+
+[ext_resource type="Texture2D" uid="uid://chr4i4poyxd6q" path="res://assets/sprites/creatures/Sprite-0002.png" id="1_b2cbg"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_w66et"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg1m6"]
+atlas = ExtResource("1_b2cbg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo0vr"]
+atlas = ExtResource("1_b2cbg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u11tv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg1m6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo0vr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_w66et")
+creature_name = "criativomon"
+creature_sprite_sheet = SubResource("SpriteFrames_u11tv")
+creature_form = 2
+creature_hp = 40
+creature_speed = 20
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"
