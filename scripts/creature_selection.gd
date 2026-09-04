@@ -10,15 +10,10 @@ func _ready() -> void:
 
 	for creature in sorteadas:
 		creature_sorteada.append(creature)
-
+	
 	$CreatureUm.sprite_frames = creature_sorteada[0].creature_sprite_sheet
 	$CreatureDois.sprite_frames = creature_sorteada[1].creature_sprite_sheet
-	$CreatureTres.sprite_frames = creature_sorteada[2].creature_sprite_sheet	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	$CreatureTres.sprite_frames = creature_sorteada[2].creature_sprite_sheet
 	
 func _pegar_lista_de_creatures() -> Array:
 	var arquivos = DirAccess.get_files_at("res://resources/creatures/")

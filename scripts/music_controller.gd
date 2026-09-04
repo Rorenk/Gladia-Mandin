@@ -9,6 +9,3 @@ func play_music():
 	if not $bgmusic.playing:
 		$bgmusic.play()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

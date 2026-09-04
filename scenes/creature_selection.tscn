@@ -1,25 +1,23 @@
 [gd_scene format=3 uid="uid://dev6bk3oknryy"]
 
 [ext_resource type="Script" uid="uid://c7o41w7vxwrwd" path="res://scripts/creature_selection.gd" id="1_xjqav"]
+[ext_resource type="PackedScene" uid="uid://2kqe6k0hspav" path="res://scenes/creature_template.tscn" id="2_u11tv"]
 
 [node name="CreatureSelection" type="Node2D" unique_id=2061494906]
 script = ExtResource("1_xjqav")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1728999364]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 640.0
-offset_bottom = 361.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2130033125]
+offset_top = -5.0
+offset_right = 645.0
+offset_bottom = 362.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CreatureUm" type="AnimatedSprite2D" parent="." unique_id=1277783844]
-position = Vector2(467, 230.00003)
-scale = Vector2(2.65625, 2.59375)
+[node name="CreatureUm" parent="." unique_id=633815107 instance=ExtResource("2_u11tv")]
+position = Vector2(441.00003, 211)
 
-[node name="CreatureDois" type="AnimatedSprite2D" parent="." unique_id=1601887279]
-position = Vector2(122, 217.00002)
-scale = Vector2(2.65625, 2.59375)
+[node name="CreatureDois" parent="." unique_id=1251725025 instance=ExtResource("2_u11tv")]
+position = Vector2(145, 219.00002)
 
-[node name="CreatureTres" type="AnimatedSprite2D" parent="." unique_id=1022559581]
-position = Vector2(298.00003, 119)
-scale = Vector2(2.65625, 2.59375)
+[node name="CreatureTres" parent="." unique_id=700056834 instance=ExtResource("2_u11tv")]
+position = Vector2(303.00003, 111.000046)

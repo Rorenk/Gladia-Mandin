@@ -5,8 +5,3 @@ extends Node2D
 func trocar(caminho: String) -> void:
 	$SFX.stream = load(caminho)
 	$SFX.play()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
