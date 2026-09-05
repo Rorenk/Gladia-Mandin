@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://2kqe6k0hspav"]
+
+[ext_resource type="Script" uid="uid://bkw5mngvhuhwr" path="res://scripts/creature/creature_selection_template.gd" id="1_03k4n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30odb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ef5n"]
+radius = 13.977349
+
+[node name="CreatureSelectionTemplate" type="AnimatedSprite2D" unique_id=633815107]
+position = Vector2(315, 160)
+scale = Vector2(2.65625, 2.59375)
+sprite_frames = SubResource("SpriteFrames_30odb")
+script = ExtResource("1_03k4n")
+
+[node name="CreatureSelectionTemplateArea2D" type="Area2D" parent="." unique_id=312648573]
+
+[node name="CreatureSelectionTemplateCollisionShape2D" type="CollisionShape2D" parent="CreatureSelectionTemplateArea2D" unique_id=606379869]
+position = Vector2(-1.4305115e-06, -1.2636185e-05)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("CircleShape2D_7ef5n")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[connection signal="mouse_entered" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_exited"]

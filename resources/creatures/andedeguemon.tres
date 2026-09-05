@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://5wxiav7mplsg"]
+
+[ext_resource type="Texture2D" uid="uid://b2gt08wapldko" path="res://assets/sprites/creatures/Sprite-0004.png" id="1_dku48"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_bvhjv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoggs"]
+atlas = ExtResource("1_dku48")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd4c1"]
+atlas = ExtResource("1_dku48")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dutw"]
+atlas = ExtResource("1_dku48")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8oas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoggs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd4c1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dutw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_bvhjv")
+creature_name = "andedeguemon"
+creature_sprite_sheet = SubResource("SpriteFrames_u8oas")
+creature_form = 3
+creature_hp = 200
+creature_speed = 10
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

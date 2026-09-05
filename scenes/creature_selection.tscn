@@ -1,23 +1,40 @@
 [gd_scene format=3 uid="uid://dev6bk3oknryy"]
 
-[ext_resource type="Script" uid="uid://c7o41w7vxwrwd" path="res://scripts/creature_selection.gd" id="1_xjqav"]
-[ext_resource type="PackedScene" uid="uid://2kqe6k0hspav" path="res://scenes/creature_template.tscn" id="2_u11tv"]
+[ext_resource type="Script" uid="uid://c7o41w7vxwrwd" path="res://scripts/scenes/creature_selection.gd" id="1_xjqav"]
+[ext_resource type="PackedScene" uid="uid://2kqe6k0hspav" path="res://scenes/creature_selection_template.tscn" id="2_u11tv"]
+[ext_resource type="Texture2D" uid="uid://dfu3fhd55io2u" path="res://assets/sprites/tilesets/floorplaceholder.png" id="3_ig0a1"]
+[ext_resource type="Script" uid="uid://ben78irq2rwup" path="res://scripts/ui/creature_selection_polygon_2d.gd" id="4_mowrr"]
+[ext_resource type="Script" uid="uid://bwxgnslx26ou3" path="res://scripts/ui/creature_seleciton_shadow_polygon_2d.gd" id="5_nb3ya"]
 
 [node name="CreatureSelection" type="Node2D" unique_id=2061494906]
+rotation = 6.2831855
 script = ExtResource("1_xjqav")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2130033125]
 offset_top = -5.0
 offset_right = 645.0
-offset_bottom = 362.0
+offset_bottom = 360.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CreatureUm" parent="." unique_id=633815107 instance=ExtResource("2_u11tv")]
-position = Vector2(441.00003, 211)
+z_index = 1
+position = Vector2(394, 210.00003)
 
 [node name="CreatureDois" parent="." unique_id=1251725025 instance=ExtResource("2_u11tv")]
-position = Vector2(145, 219.00002)
+z_index = 1
+position = Vector2(267, 205)
 
 [node name="CreatureTres" parent="." unique_id=700056834 instance=ExtResource("2_u11tv")]
-position = Vector2(303.00003, 111.000046)
+z_index = 1
+position = Vector2(319, 125)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=681523502]
+texture_repeat = 2
+use_parent_material = true
+texture = ExtResource("3_ig0a1")
+script = ExtResource("4_mowrr")
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygon2D" unique_id=1849663969]
+invert_border = 0.1
+script = ExtResource("5_nb3ya")

@@ -26,6 +26,7 @@ func _on_slider_sfx_value_changed(value: float) -> void:
 
 func _on_button_sound_test_pressed() -> void:
 	SFXController.trocar("res://assets/audio/sfx/sair.mp3")
+	get_tree().debug_collisions_hint = not get_tree().debug_collisions_hint
 
 func _on_button_voltar_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

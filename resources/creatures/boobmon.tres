@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://dma278pkccl8k"]
 
 [ext_resource type="Texture2D" uid="uid://lwtw1h7xuik4" path="res://assets/sprites/creatures/boobmon.png" id="1_phwja"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_roy61"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_roy61"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phwja"]
 atlas = ExtResource("1_phwja")

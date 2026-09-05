@@ -12,8 +12,12 @@ func _ready() -> void:
 		creature_sorteada.append(creature)
 	
 	$CreatureUm.sprite_frames = creature_sorteada[0].creature_sprite_sheet
+	$CreatureUm.scale = Vector2(1.0, 1.0)
 	$CreatureDois.sprite_frames = creature_sorteada[1].creature_sprite_sheet
+	$CreatureDois.scale = Vector2(1.0, 1.0)
 	$CreatureTres.sprite_frames = creature_sorteada[2].creature_sprite_sheet
+	$CreatureTres.scale = Vector2(1.0, 1.0)
+
 	
 func _pegar_lista_de_creatures() -> Array:
 	var arquivos = DirAccess.get_files_at("res://resources/creatures/")
@@ -22,7 +26,7 @@ func _pegar_lista_de_creatures() -> Array:
 	for arquivo in arquivos:
 		if arquivo.ends_with(".tres"):
 			var creature: CreatureResource = load("res://resources/creatures/" + arquivo)
-			if creature.creature_form == creature_form_sort:
+			if creature.creature_form >= creature_form_sort:
 				creatures.append(creature)
 	return creatures
 

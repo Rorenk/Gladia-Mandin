@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://cj18jaowxlmyc"]
 
 [ext_resource type="Texture2D" uid="uid://d05eo4rh42voa" path="res://assets/sprites/creatures/Sprite-0001.png" id="1_tgjod"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/creature_resource.gd" id="2_u8oas"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_u8oas"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpqvj"]
 atlas = ExtResource("1_tgjod")
