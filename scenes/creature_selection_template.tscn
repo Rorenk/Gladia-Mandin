@@ -8,7 +8,7 @@
 radius = 13.977349
 
 [node name="CreatureSelectionTemplate" type="AnimatedSprite2D" unique_id=633815107]
-position = Vector2(315, 160)
+position = Vector2(330, 164.00002)
 scale = Vector2(2.65625, 2.59375)
 sprite_frames = SubResource("SpriteFrames_30odb")
 script = ExtResource("1_03k4n")
@@ -21,5 +21,6 @@ scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("CircleShape2D_7ef5n")
 debug_color = Color(1, 0, 0, 0.41960785)
 
+[connection signal="input_event" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_selection_template_area_2d_input_event"]
 [connection signal="mouse_entered" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_exited"]

@@ -11,6 +11,13 @@ var escala_base := 1.0
 var tempo_animacao := 0.0 
 var intensidade_squash := 0.15 
 var velocidade_squash := 8.0
+var creature_dados: CreatureResource
+
+func carregar_dados(dados: CreatureResource) -> void:
+	creature_dados = dados
+	sprite_frames = dados.creature_sprite_sheet
+	print("Criatura carregada: ", creature_dados.creature_name)
+
 
 func _ready() -> void:
 	_sortear_nova_direcao()
@@ -54,3 +61,8 @@ func _sortear_nova_direcao() -> void:
 	var angulo := randf_range(0, TAU)
 	direcao = Vector2(cos(angulo), sin(angulo))
 	trocar_direcao_timer = randf_range(2, 5)
+
+func _on_creature_selection_template_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		GameState.creature_escolhida = creature_dados.duplicate(true)
+		get_tree().change_scene_to_file("res://scenes/battle.tscn")

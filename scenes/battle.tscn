@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://buwmk3bu020rk"]
+
+[ext_resource type="PackedScene" uid="uid://2kqe6k0hspav" path="res://scenes/creature_selection_template.tscn" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://bwr15h4soraf" path="res://scripts/scenes/battle.gd" id="1_th188"]
+
+[node name="battle" type="Node2D" unique_id=1401582562]
+script = ExtResource("1_th188")
+
+[node name="CreatureUm" parent="." unique_id=633815107 instance=ExtResource("1_dn72j")]
+z_index = 1
+position = Vector2(199.00005, 146.00003)

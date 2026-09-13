@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var creature_sorteada: Array[CreatureResource] = []
 var creature_form_sort = 1
 
@@ -11,11 +12,11 @@ func _ready() -> void:
 	for creature in sorteadas:
 		creature_sorteada.append(creature)
 	
-	$CreatureUm.sprite_frames = creature_sorteada[0].creature_sprite_sheet
+	$CreatureUm.carregar_dados(creature_sorteada[0])
 	$CreatureUm.scale = Vector2(1.0, 1.0)
-	$CreatureDois.sprite_frames = creature_sorteada[1].creature_sprite_sheet
+	$CreatureDois.carregar_dados(creature_sorteada[1])
 	$CreatureDois.scale = Vector2(1.0, 1.0)
-	$CreatureTres.sprite_frames = creature_sorteada[2].creature_sprite_sheet
+	$CreatureTres.carregar_dados(creature_sorteada[2])
 	$CreatureTres.scale = Vector2(1.0, 1.0)
 
 	
@@ -26,7 +27,7 @@ func _pegar_lista_de_creatures() -> Array:
 	for arquivo in arquivos:
 		if arquivo.ends_with(".tres"):
 			var creature: CreatureResource = load("res://resources/creatures/" + arquivo)
-			if creature.creature_form >= creature_form_sort:
+			if creature.creature_form == creature_form_sort:
 				creatures.append(creature)
 	return creatures
 

@@ -27,7 +27,7 @@ position = Vector2(263.00003, 226.99995)
 
 [node name="CreatureTres" parent="." unique_id=700056834 instance=ExtResource("2_u11tv")]
 z_index = 1
-position = Vector2(337.00003, 111.99995)
+position = Vector2(329.00003, 113.99995)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=681523502]
 texture_repeat = 2

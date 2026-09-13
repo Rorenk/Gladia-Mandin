@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MusicController="*uid://cvlall41eb1bj"
 SFXController="*uid://c32nq4wrq5gi2"
+GameState="*uid://dyqik257e83u5"
 
 [display]
 
