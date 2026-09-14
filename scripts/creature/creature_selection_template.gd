@@ -1,5 +1,8 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 class_name CreatureSelectionTemplate
+
+@onready var sprite: AnimatedSprite2D = $CreatureSelectionTemplateAnimatedSprite2D
+
 
 var velocidade := 15.0
 var direcao := Vector2.ZERO
@@ -15,7 +18,7 @@ var creature_dados: CreatureResource
 
 func _carregar_creature_data(dados: CreatureResource) -> void:
 	creature_dados = dados
-	sprite_frames = dados.creature_sprite_sheet
+	sprite.sprite_frames = dados.creature_sprite_sheet
 	print("Criatura carregada: ", creature_dados.creature_name)
 
 
@@ -23,12 +26,12 @@ func _ready() -> void:
 	_sortear_nova_direcao()
 
 func _on_creature_template_area_2d_mouse_entered() -> void:
-	frame = 1;
+	sprite.frame = 1;
 	pode_andar = false
 
 
 func _on_creature_template_area_2d_mouse_exited() -> void:
-	frame = 0;
+	sprite.frame = 0;
 	pode_andar = true
 
 func _process(delta: float) -> void:
@@ -39,9 +42,9 @@ func _process(delta: float) -> void:
 	position += direcao * velocidade * delta
 
 	if direcao.x < 0:
-		flip_h = true
+		sprite.flip_h = true
 	elif direcao.x > 0:
-		flip_h = false
+		sprite.flip_h = false
 
 	tempo_animacao += delta * velocidade_squash
 	var onda = sin(tempo_animacao)

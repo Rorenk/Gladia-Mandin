@@ -19,15 +19,15 @@ color = Color(0, 0, 0, 1)
 
 [node name="CreatureUm" parent="." unique_id=633815107 instance=ExtResource("2_u11tv")]
 z_index = 1
-position = Vector2(398.00006, 229.99994)
+position = Vector2(419.00006, 236.99994)
 
 [node name="CreatureDois" parent="." unique_id=1251725025 instance=ExtResource("2_u11tv")]
 z_index = 1
-position = Vector2(263.00003, 226.99995)
+position = Vector2(252.00006, 226.99995)
 
 [node name="CreatureTres" parent="." unique_id=700056834 instance=ExtResource("2_u11tv")]
 z_index = 1
-position = Vector2(337.00003, 111.99995)
+position = Vector2(325.00003, 97.99995)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=681523502]
 texture_repeat = 2

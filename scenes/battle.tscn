@@ -1,18 +1,45 @@
 [gd_scene format=3 uid="uid://buwmk3bu020rk"]
 
-[ext_resource type="PackedScene" uid="uid://2kqe6k0hspav" path="res://scenes/creature_selection_template.tscn" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://bwr15h4soraf" path="res://scripts/scenes/battle.gd" id="1_th188"]
-[ext_resource type="Script" uid="uid://d2a75gvr063be" path="res://scripts/creature/creature_battle_template.gd" id="3_p1qf1"]
+[ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="3_p1qf1"]
+[ext_resource type="Texture2D" uid="uid://lwtw1h7xuik4" path="res://assets/sprites/creatures/boobmon.png" id="4_a12nh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpir7"]
+texture = ExtResource("4_a12nh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_l6fsk"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lpir7")
 
 [node name="battle" type="Node2D" unique_id=1401582562]
+position = Vector2(-7, -6)
 script = ExtResource("1_th188")
 
-[node name="CreaturePlayerUm" parent="." unique_id=633815107 instance=ExtResource("1_dn72j")]
-z_index = 1
-position = Vector2(136.00002, 155.00002)
-script = ExtResource("3_p1qf1")
+[node name="TileMap" type="TileMap" parent="." unique_id=181124378]
+position = Vector2(4.9999995, 3.9999998)
+scale = Vector2(0.99999994, 0.99999994)
+tile_set = SubResource("TileSet_l6fsk")
+format = 2
+layer_0/tile_data = PackedInt32Array(1376571, 65536, 0, 1311035, 65536, 0, 1311036, 65536, 0, 0, 131072, 0, 1, 196608, 0, 65536, 131072, 0, 2, 196608, 0, 3, 196608, 0, 4, 196608, 0, 5, 196608, 0, 6, 196608, 0, 7, 196608, 0, 8, 196608, 0, 9, 196608, 0, 10, 196608, 0, 11, 196608, 0, 12, 196608, 0, 13, 196608, 0, 14, 196608, 0, 15, 196608, 0, 16, 196608, 0, 17, 196608, 0, 18, 196608, 0, 19, 196608, 0, 20, 196608, 0, 21, 196608, 0, 22, 196608, 0, 23, 196608, 0, 24, 196608, 0, 25, 196608, 0, 26, 196608, 0, 27, 196608, 0, 28, 196608, 0, 29, 196608, 0, 30, 196608, 0, 31, 196608, 0, 32, 196608, 0, 33, 196608, 0, 34, 196608, 0, 35, 196608, 0, 36, 196608, 0, 37, 196608, 0, 38, 196608, 0, 39, 196608, 0, 65575, 196608, 1, 131111, 196608, 1, 196647, 196608, 1, 262183, 196608, 1, 327719, 196608, 1, 393255, 196608, 1, 458791, 196608, 1, 524327, 196608, 1, 589863, 196608, 1, 655399, 196608, 1, 720935, 196608, 1, 786471, 196608, 1, 852007, 196608, 1, 917543, 196608, 1, 983079, 196608, 1, 1048615, 196608, 1, 1114151, 196608, 1, 1179687, 196608, 1, 1245223, 196608, 1, 1310759, 196608, 1, 1376295, 196608, 1, 1441831, 196608, 1, 1441820, 131072, 1, 1441821, 131072, 1, 1441822, 131072, 1, 1441823, 131072, 1, 1441824, 131072, 1, 1441825, 131072, 1, 1441826, 131072, 1, 1441827, 131072, 1, 1441828, 131072, 1, 1441829, 131072, 1, 1441830, 131072, 1, 1441812, 131072, 1, 1441813, 131072, 1, 1441814, 131072, 1, 1441815, 131072, 1, 1441816, 131072, 1, 1441817, 131072, 1, 1441818, 131072, 1, 1441819, 131072, 1, 1441802, 131072, 1, 1441803, 131072, 1, 1441804, 131072, 1, 1441805, 131072, 1, 1441806, 131072, 1, 1441807, 131072, 1, 1441808, 131072, 1, 1441809, 131072, 1, 1441810, 131072, 1, 1441811, 131072, 1, 1441792, 131072, 1, 1441793, 131072, 1, 1441794, 131072, 1, 1441795, 131072, 1, 1441796, 131072, 1, 1441797, 131072, 1, 1441798, 131072, 1, 1441799, 131072, 1, 1441800, 131072, 1, 1441801, 131072, 1, 1114112, 131072, 0, 1179648, 131072, 0, 1245184, 131072, 0, 1310720, 131072, 0, 1376256, 131072, 0, 786432, 131072, 0, 851968, 131072, 0, 917504, 131072, 0, 983040, 131072, 0, 1048576, 131072, 0, 327680, 131072, 0, 393216, 131072, 0, 458752, 131072, 0, 524288, 131072, 0, 589824, 131072, 0, 655360, 131072, 0, 720896, 131072, 0, 131072, 131072, 0, 196608, 131072, 0, 262144, 131072, 0, 917517, 131072, 0, 983053, 131072, 1, 917518, 196608, 0, 983054, 196608, 1, 393239, 131072, 0, 458775, 131072, 1, 393240, 196608, 0, 458776, 196608, 1, 983066, 131072, 0, 1048602, 131072, 1, 983067, 196608, 0, 1048603, 196608, 1, 196620, 131072, 0, 262156, 131072, 1, 196621, 196608, 0, 262157, 196608, 1)
 
-[node name="CreatureCpuUm" parent="." unique_id=2093845263 instance=ExtResource("1_dn72j")]
-z_index = 1
-position = Vector2(477.00003, 154)
-script = ExtResource("3_p1qf1")
+[node name="CreaturePlayerUm" parent="." unique_id=2000662877 instance=ExtResource("3_p1qf1")]
+position = Vector2(464, 165)
+
+[node name="CreatureCpuUm" parent="." unique_id=1567605967 instance=ExtResource("3_p1qf1")]
+position = Vector2(170, 162)
