@@ -16,6 +16,10 @@ script = ExtResource("1_to62s")
 shape = SubResource("CircleShape2D_a45g6")
 debug_color = Color(0, 0.47280645, 0.5147358, 0.41960785)
 
+[node name="CreatureNavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=567298186]
+debug_enabled = true
+debug_path_custom_color = Color(0, 0, 0, 1)
+
 [node name="CreatureBattleTemplateAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1781743348]
 
 [node name="CreatureBattleTemplateArea2D" type="Area2D" parent="." unique_id=1158761457]

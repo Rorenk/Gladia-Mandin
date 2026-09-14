@@ -10,7 +10,7 @@ var trocar_direcao_timer := 0.0
 var pode_andar := true
 var centro_circulo := Vector2(320, 180)
 var raio_circulo := 150.0 
-var escala_base := 1.0 
+var escala_base := 0.6
 var tempo_animacao := 0.0 
 var intensidade_squash := 0.15 
 var velocidade_squash := 8.0
@@ -34,12 +34,12 @@ func _on_creature_template_area_2d_mouse_exited() -> void:
 	sprite.frame = 0;
 	pode_andar = true
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if not pode_andar:
 		scale = Vector2.ONE * escala_base 
 		return
 
-	position += direcao * velocidade * delta
+	velocity = direcao * velocidade
 
 	if direcao.x < 0:
 		sprite.flip_h = true
@@ -59,6 +59,8 @@ func _process(delta: float) -> void:
 	trocar_direcao_timer -= delta
 	if trocar_direcao_timer <= 0:
 		_sortear_nova_direcao()
+
+	move_and_slide()
 
 func _sortear_nova_direcao() -> void:
 	var angulo := randf_range(0, TAU)

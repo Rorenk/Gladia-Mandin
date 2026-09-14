@@ -13,11 +13,8 @@ func _ready() -> void:
 		creature_sorteada.append(creature)
 	
 	$CreatureUm._carregar_creature_data(creature_sorteada[0])
-	$CreatureUm.scale = Vector2(1.0, 1.0)
 	$CreatureDois._carregar_creature_data(creature_sorteada[1])
-	$CreatureDois.scale = Vector2(1.0, 1.0)
 	$CreatureTres._carregar_creature_data(creature_sorteada[2])
-	$CreatureTres.scale = Vector2(1.0, 1.0)
 
 	
 func _pegar_lista_de_creatures() -> Array:

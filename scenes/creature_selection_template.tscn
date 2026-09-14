@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bkw5mngvhuhwr" path="res://scripts/creature/creature_selection_template.gd" id="1_03k4n"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_30odb"]
+radius = 13.552948
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ef5n"]
 radius = 14.0
 
@@ -9,6 +12,11 @@ radius = 14.0
 position = Vector2(330, 164.00002)
 scale = Vector2(2.65625, 2.59375)
 script = ExtResource("1_03k4n")
+
+[node name="CreatureHitboxCollisionShape2D" type="CollisionShape2D" parent="." unique_id=287917657]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_30odb")
+debug_color = Color(0.9023953, 0.30945754, 0, 0.41960785)
 
 [node name="CreatureSelectionTemplateAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1421578565]
 scale = Vector2(0.99999994, 0.99999994)
@@ -19,7 +27,7 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(-1.4305115e-06, -1.2636185e-05)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("CircleShape2D_7ef5n")
-debug_color = Color(1, 0, 0, 0.41960785)
+debug_color = Color(0.6753601, 0.50514656, 0, 0.41960785)
 
 [connection signal="input_event" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_selection_template_area_2d_input_event"]
 [connection signal="mouse_entered" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_entered"]
