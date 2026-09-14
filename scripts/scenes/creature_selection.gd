@@ -12,11 +12,11 @@ func _ready() -> void:
 	for creature in sorteadas:
 		creature_sorteada.append(creature)
 	
-	$CreatureUm.carregar_dados(creature_sorteada[0])
+	$CreatureUm._carregar_creature_data(creature_sorteada[0])
 	$CreatureUm.scale = Vector2(1.0, 1.0)
-	$CreatureDois.carregar_dados(creature_sorteada[1])
+	$CreatureDois._carregar_creature_data(creature_sorteada[1])
 	$CreatureDois.scale = Vector2(1.0, 1.0)
-	$CreatureTres.carregar_dados(creature_sorteada[2])
+	$CreatureTres._carregar_creature_data(creature_sorteada[2])
 	$CreatureTres.scale = Vector2(1.0, 1.0)
 
 	

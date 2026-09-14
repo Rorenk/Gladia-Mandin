@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bdrakfc7hh5kf"]
+
+[ext_resource type="Script" uid="uid://d2a75gvr063be" path="res://scripts/creature/creature_battle_template.gd" id="1_to62s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iswlo"]
+radius = 14.0
+
+[node name="CreatureBattleTemplate" type="AnimatedSprite2D" unique_id=1671349963]
+position = Vector2(322, 152)
+script = ExtResource("1_to62s")
+
+[node name="CreatureBattleTemplateArea2D" type="Area2D" parent="." unique_id=1158761457]
+
+[node name="CreatureBattleTemplateCollisionShape2D" type="CollisionShape2D" parent="CreatureBattleTemplateArea2D" unique_id=1898690428]
+shape = SubResource("CircleShape2D_iswlo")
+debug_color = Color(1, 0, 0, 0.41960785)

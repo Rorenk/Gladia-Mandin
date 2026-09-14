@@ -5,7 +5,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_30odb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ef5n"]
-radius = 13.977349
+radius = 14.0
 
 [node name="CreatureSelectionTemplate" type="AnimatedSprite2D" unique_id=633815107]
 position = Vector2(330, 164.00002)

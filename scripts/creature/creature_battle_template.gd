@@ -1,7 +1,6 @@
 extends AnimatedSprite2D
-class_name CreatureSelectionTemplate
+class_name CreatureBattleTemplate
 
-var velocidade := 15.0
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
 var pode_andar := true
@@ -36,7 +35,7 @@ func _process(delta: float) -> void:
 		scale = Vector2.ONE * escala_base 
 		return
 
-	position += direcao * velocidade * delta
+	position += direcao * creature_dados.creature_speed * delta
 
 	if direcao.x < 0:
 		flip_h = true
