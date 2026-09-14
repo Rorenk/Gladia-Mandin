@@ -26,12 +26,12 @@ func _ready() -> void:
 	_sortear_nova_direcao()
 
 func _on_creature_template_area_2d_mouse_entered() -> void:
-	sprite.frame = 1;
+	sprite.frame = 1
 	pode_andar = false
 
 
 func _on_creature_template_area_2d_mouse_exited() -> void:
-	sprite.frame = 0;
+	sprite.frame = 0
 	pode_andar = true
 
 func _physics_process(delta: float) -> void:

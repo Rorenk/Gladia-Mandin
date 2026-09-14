@@ -7,7 +7,6 @@ class_name CreatureBattleTemplate
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
 var pode_andar := true
-var centro_circulo := Vector2(320, 180)
 var intensidade_squash := 0.15 
 var velocidade_squash := 8.0
 var creature_dados: CreatureResource
@@ -23,12 +22,12 @@ func _ready() -> void:
 	_sortear_nova_direcao()
 
 func _on_creature_battle_template_area_2d_mouse_entered() -> void:
-	sprite.frame = 1;
+	sprite.frame = 1
 	pode_andar = false
 
 
 func _on_creature_battle_template_area_2d_mouse_exited() -> void:
-	sprite.frame = 0;
+	sprite.frame = 0
 	pode_andar = true
 
 func _physics_process(delta: float) -> void:

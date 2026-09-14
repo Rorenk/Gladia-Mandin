@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://h8la7idvjbcc"]
+
+[ext_resource type="Texture2D" uid="uid://dt6tyo1lxxa1" path="res://assets/sprites/creatures/ashmon.png" id="1_lv3au"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_csp0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csp0o"]
+atlas = ExtResource("1_lv3au")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl21q"]
+atlas = ExtResource("1_lv3au")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p1qf1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csp0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl21q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_csp0o")
+creature_name = "ashemon"
+creature_sprite_sheet = SubResource("SpriteFrames_p1qf1")
+creature_form = 1
+creature_hp = 500
+creature_speed = 100
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"
