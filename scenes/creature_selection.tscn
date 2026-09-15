@@ -23,7 +23,7 @@ position = Vector2(419.00006, 236.99994)
 
 [node name="CreatureDois" parent="." unique_id=1251725025 instance=ExtResource("2_u11tv")]
 z_index = 1
-position = Vector2(252.00006, 226.99995)
+position = Vector2(240.00005, 238.99995)
 
 [node name="CreatureTres" parent="." unique_id=700056834 instance=ExtResource("2_u11tv")]
 z_index = 1

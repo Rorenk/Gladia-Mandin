@@ -6,9 +6,8 @@ class_name CreatureBattleTemplate
 
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
+var escala_base := 0.6
 var pode_andar := true
-var intensidade_squash := 0.15 
-var velocidade_squash := 8.0
 var creature_dados: CreatureResource
 var alvo: CreatureBattleTemplate
 
@@ -31,10 +30,12 @@ func _on_creature_battle_template_area_2d_mouse_exited() -> void:
 	pode_andar = true
 
 func _physics_process(delta: float) -> void:
+	scale = Vector2.ONE * escala_base 
 	if  alvo == null:
 		return
 	
 	nav_agent.target_position = alvo.global_position
+
 
 	if nav_agent.is_navigation_finished():
 		velocity = Vector2.ZERO
@@ -48,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = true
 	elif direcao_nav.x > 0:
 		sprite.flip_h = false
-
 
 
 	move_and_slide()

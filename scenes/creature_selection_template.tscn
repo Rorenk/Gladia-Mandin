@@ -9,7 +9,7 @@ radius = 13.552948
 radius = 14.0
 
 [node name="CreatureSelectionTemplate" type="CharacterBody2D" unique_id=1029222603]
-position = Vector2(330, 164.00002)
+position = Vector2(329.00003, 171.00002)
 scale = Vector2(2.65625, 2.59375)
 script = ExtResource("1_03k4n")
 
