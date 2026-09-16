@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b2gt08wapldko" path="res://assets/sprites/creatures/Sprite-0004.png" id="1_dku48"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_bvhjv"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skill_teste.tres" id="3_bvhjv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoggs"]
 atlas = ExtResource("1_dku48")
@@ -34,6 +35,7 @@ animations = [{
 
 [resource]
 script = ExtResource("2_bvhjv")
+special_skill = ExtResource("3_bvhjv")
 creature_sprite_sheet = SubResource("SpriteFrames_u8oas")
 creature_name = "andedeguemon"
 creature_speed = 10

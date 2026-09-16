@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="1_xdrx3"]
 [ext_resource type="Texture2D" uid="uid://blacovkee00n2" path="res://assets/sprites/creatures/adachimon.png" id="1_yr7hp"]
-[ext_resource type="Script" uid="uid://cerw632hmi7dm" path="res://scripts/abilities/skills/skilltest.gd" id="3_osop1"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skill_teste.tres" id="3_osop1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osop1"]
 atlas = ExtResource("1_yr7hp")
@@ -26,15 +26,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_yr7hp"]
-script = ExtResource("3_osop1")
-skill_name = "wow"
-cooldown = 40.0
-metadata/_custom_type_script = "uid://cerw632hmi7dm"
-
 [resource]
 script = ExtResource("1_xdrx3")
-special_skill = SubResource("Resource_yr7hp")
+special_skill = ExtResource("3_osop1")
 creature_sprite_sheet = SubResource("SpriteFrames_85imq")
 creature_name = "Adachimon"
 creature_max_hp = 100

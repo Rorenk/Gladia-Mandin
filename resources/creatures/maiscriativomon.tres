@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chr4i4poyxd6q" path="res://assets/sprites/creatures/Sprite-0002.png" id="1_b2cbg"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_w66et"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skill_teste.tres" id="3_ox4px"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pg1m6"]
 atlas = ExtResource("1_b2cbg")
@@ -27,6 +28,7 @@ animations = [{
 
 [resource]
 script = ExtResource("2_w66et")
+special_skill = ExtResource("3_ox4px")
 creature_sprite_sheet = SubResource("SpriteFrames_u11tv")
 creature_name = "criativomon"
 creature_speed = 20

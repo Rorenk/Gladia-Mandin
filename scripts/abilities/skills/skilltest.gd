@@ -3,7 +3,8 @@ class_name SkillTeste
 
 
 func executar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
-    print("Skill usada: ", skill_name) 
-    print("Cooldown: ", cooldown)
-    print("Cliquei em ", usuario.creature_dados.creature_name)
-
+	print("Skill usada: ", skill_name) 
+	print("Cooldown: ", cooldown)
+	print("Cliquei em ", usuario.creature_dados.creature_name)
+	print("velocidade atual: ", usuario.creature_dados.creature_speed)
+	usuario.creature_dados.creature_speed = usuario.creature_dados.creature_speed - 10

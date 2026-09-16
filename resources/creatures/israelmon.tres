@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bidrwitv0k2bg" path="res://assets/sprites/creatures/israelmon.png" id="1_brf0f"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_o2uan"]
-[ext_resource type="Script" uid="uid://cerw632hmi7dm" path="res://scripts/abilities/skills/skilltest.gd" id="3_o2uan"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skill_teste.tres" id="3_o2uan"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brf0f"]
 atlas = ExtResource("1_brf0f")
@@ -26,15 +26,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_oqaog"]
-script = ExtResource("3_o2uan")
-skill_name = "Mais 30 trilhoes para israel"
-cooldown = 30.0
-metadata/_custom_type_script = "uid://cerw632hmi7dm"
-
 [resource]
 script = ExtResource("2_o2uan")
-special_skill = SubResource("Resource_oqaog")
+special_skill = ExtResource("3_o2uan")
 creature_sprite_sheet = SubResource("SpriteFrames_yi1d6")
 creature_name = "Israelmon"
 creature_speed = 700

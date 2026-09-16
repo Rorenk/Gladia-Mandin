@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SkillTeste" format=3 uid="uid://gt28sn76u1og"]
+
+[ext_resource type="Script" uid="uid://cerw632hmi7dm" path="res://scripts/abilities/skills/skilltest.gd" id="1_a22e2"]
+
+[resource]
+script = ExtResource("1_a22e2")
+skill_name = "Skill Teste"
+cooldown = 30.0
+metadata/_custom_type_script = "uid://cerw632hmi7dm"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dt6tyo1lxxa1" path="res://assets/sprites/creatures/ashmon.png" id="1_lv3au"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_csp0o"]
-[ext_resource type="Script" uid="uid://cvyan3dci8c3u" path="res://scripts/resource/skill_base_resource.gd" id="3_csp0o"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skill_teste.tres" id="3_csp0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_csp0o"]
 atlas = ExtResource("1_lv3au")
@@ -26,15 +26,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_osop1"]
-script = ExtResource("3_csp0o")
-skill_name = "babybue"
-cooldown = 11111.0
-metadata/_custom_type_script = "uid://cvyan3dci8c3u"
-
 [resource]
 script = ExtResource("2_csp0o")
-special_skill = SubResource("Resource_osop1")
+special_skill = ExtResource("3_csp0o")
 creature_sprite_sheet = SubResource("SpriteFrames_p1qf1")
 creature_name = "ashemon"
 creature_speed = 100
