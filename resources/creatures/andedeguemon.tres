@@ -34,9 +34,8 @@ animations = [{
 
 [resource]
 script = ExtResource("2_bvhjv")
-creature_name = "andedeguemon"
 creature_sprite_sheet = SubResource("SpriteFrames_u8oas")
-creature_form = 3
-creature_hp = 200
+creature_name = "andedeguemon"
 creature_speed = 10
+creature_form = 3
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"

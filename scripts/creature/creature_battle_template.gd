@@ -22,6 +22,7 @@ func _ready() -> void:
 
 func _on_creature_battle_template_area_2d_mouse_entered() -> void:
 	sprite.frame = 1
+	creature_dados.special_skill.executar(self, alvo)
 	pode_andar = false
 
 
