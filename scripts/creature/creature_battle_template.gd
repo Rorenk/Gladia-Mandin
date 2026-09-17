@@ -3,6 +3,7 @@ class_name CreatureBattleTemplate
 
 @onready var sprite: AnimatedSprite2D = $CreatureBattleTemplateAnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $CreatureNavigationAgent2D
+@onready var life_bar: ProgressBar = $CreatureTextureProgressBar
 
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
@@ -15,6 +16,11 @@ func _carregar_creature_data(dados: CreatureResource) -> void:
 	creature_dados = dados
 	sprite.sprite_frames = dados.creature_sprite_sheet
 	print("Criatura carregada: ", creature_dados.creature_name)
+	lizar_life_bar()
+
+func lizar_life_bar() -> void:
+		life_bar.max_value = creature_dados.creature_max_hp
+		life_bar.value = creature_dados.creature_current_hp
 
 
 func _ready() -> void:
@@ -55,7 +61,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-	
 func _sortear_nova_direcao() -> void:
 	var angulo := randf_range(0, TAU)
 	direcao = Vector2(cos(angulo), sin(angulo))

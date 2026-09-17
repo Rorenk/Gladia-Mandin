@@ -20,6 +20,8 @@ var creature_current_hp: int
 @export var creature_form: int
 
 
+func _init() -> void:
+    creature_current_hp = creature_max_hp
 
 func receber_dano(quantidade: int) -> void:
     creature_current_hp = max(0, creature_current_hp - quantidade)

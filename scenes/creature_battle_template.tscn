@@ -28,6 +28,13 @@ debug_path_custom_color = Color(0, 0, 0, 1)
 shape = SubResource("CircleShape2D_iswlo")
 debug_color = Color(0.88550586, 0.6855914, 0, 0.41960785)
 
+[node name="CreatureTextureProgressBar" type="ProgressBar" parent="." unique_id=1429102386]
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 48.0
+offset_bottom = -6.0
+scale = Vector2(0.62, 0.62)
+
 [connection signal="input_event" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_input_event"]
 [connection signal="mouse_entered" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_mouse_exited"]
