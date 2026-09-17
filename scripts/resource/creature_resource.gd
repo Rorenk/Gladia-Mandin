@@ -20,7 +20,9 @@ var creature_current_hp: int
 @export var creature_form: int
 
 
-func _init() -> void:
+
+
+func _ready() -> void:
     creature_current_hp = creature_max_hp
 
 func receber_dano(quantidade: int) -> void:
@@ -31,3 +33,4 @@ func curar(quantidade: int) -> void:
 
 func receber_afeito(quantidade: int) -> void:
     creature_affection = clamp(creature_affection + quantidade, -100, 100) 
+

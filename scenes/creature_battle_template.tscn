@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdrakfc7hh5kf"]
 
 [ext_resource type="Script" uid="uid://d2a75gvr063be" path="res://scripts/creature/creature_battle_template.gd" id="1_to62s"]
+[ext_resource type="Script" uid="uid://cm2i6tlr572ek" path="res://scripts/creature/creature_attack_manager.gd" id="2_spl83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a45g6"]
 radius = 14.0
@@ -29,11 +30,18 @@ shape = SubResource("CircleShape2D_iswlo")
 debug_color = Color(0.88550586, 0.6855914, 0, 0.41960785)
 
 [node name="CreatureTextureProgressBar" type="ProgressBar" parent="." unique_id=1429102386]
-offset_left = -20.0
-offset_top = -33.0
-offset_right = 48.0
-offset_bottom = -6.0
+offset_left = -34.0
+offset_top = -37.0
+offset_right = 77.29031
+offset_bottom = -10.0
 scale = Vector2(0.62, 0.62)
+
+[node name="CreatureAttackManager" type="Node2D" parent="." unique_id=478384196]
+script = ExtResource("2_spl83")
+
+[node name="CreatureBasicAttackTimer" type="Timer" parent="CreatureAttackManager" unique_id=1787095920]
+
+[node name="CreatureSkillTimer" type="Timer" parent="CreatureAttackManager" unique_id=1696161759]
 
 [connection signal="input_event" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_input_event"]
 [connection signal="mouse_entered" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_mouse_entered"]
