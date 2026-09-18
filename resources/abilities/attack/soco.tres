@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MeleeBaseAttack" format=3 uid="uid://dive66d8lf1on"]
+
+[ext_resource type="Script" uid="uid://c34ex22vee8ur" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
+
+[resource]
+script = ExtResource("1_ytex0")
+skill_name = "soco"
+cooldown = 10000.0
+skill_description = "teste"
+metadata/_custom_type_script = "uid://c34ex22vee8ur"

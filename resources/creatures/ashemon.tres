@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://h8la7idvjbcc"]
 
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_bl21q"]
 [ext_resource type="Texture2D" uid="uid://dt6tyo1lxxa1" path="res://assets/sprites/creatures/ashmon.png" id="1_lv3au"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_csp0o"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_csp0o"]
@@ -28,6 +29,7 @@ animations = [{
 
 [resource]
 script = ExtResource("2_csp0o")
+basic_attack = ExtResource("1_bl21q")
 special_skill = ExtResource("3_csp0o")
 creature_sprite_sheet = SubResource("SpriteFrames_p1qf1")
 creature_name = "ashemon"

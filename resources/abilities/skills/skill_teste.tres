@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_a22e2")
 skill_name = "Skill Teste"
-cooldown = 30.0
+cooldown = 3.0
 skill_description = "dá slow em si mesmo igual o blitz"
 skill_icon = ExtResource("2_vpunq")
 metadata/_custom_type_script = "uid://cerw632hmi7dm"

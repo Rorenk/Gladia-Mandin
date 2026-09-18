@@ -6,6 +6,7 @@ class_name CreatureResource
 var creature_affection: int = 0
 var creature_current_hp: int
 
+@export var basic_attack: AttackBase
 @export var special_skill: SkillBase
 
 @export var creature_sprite_sheet: SpriteFrames
@@ -22,7 +23,7 @@ var creature_current_hp: int
 
 
 
-func _ready() -> void:
+func inicializar() -> void:
     creature_current_hp = creature_max_hp
 
 func receber_dano(quantidade: int) -> void:

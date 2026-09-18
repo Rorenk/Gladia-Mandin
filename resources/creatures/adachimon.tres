@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://b1n40dr8cni1o"]
 
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_2wwjk"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="1_xdrx3"]
 [ext_resource type="Texture2D" uid="uid://blacovkee00n2" path="res://assets/sprites/creatures/adachimon.png" id="1_yr7hp"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_osop1"]
@@ -28,6 +29,7 @@ animations = [{
 
 [resource]
 script = ExtResource("1_xdrx3")
+basic_attack = ExtResource("1_2wwjk")
 special_skill = ExtResource("3_osop1")
 creature_sprite_sheet = SubResource("SpriteFrames_85imq")
 creature_name = "Adachimon"
@@ -36,7 +38,7 @@ creature_attack = 120
 creature_defense = 40
 creature_special_attack = 150
 creature_special_defense = 30
-creature_speed = 30
+creature_speed = 10
 creature_luck = 150
 creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"

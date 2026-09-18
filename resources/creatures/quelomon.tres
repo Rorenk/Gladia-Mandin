@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://biqonvl1kmjg0"]
 
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_mx2sb"]
 [ext_resource type="Texture2D" uid="uid://duni0lb3jytvd" path="res://assets/sprites/creatures/quelomon.png" id="1_pqt1w"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_6tx8o"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_6tx8o"]
@@ -28,6 +29,7 @@ animations = [{
 
 [resource]
 script = ExtResource("2_6tx8o")
+basic_attack = ExtResource("1_mx2sb")
 special_skill = ExtResource("3_6tx8o")
 creature_sprite_sheet = SubResource("SpriteFrames_xjqav")
 creature_name = "Quelomon"

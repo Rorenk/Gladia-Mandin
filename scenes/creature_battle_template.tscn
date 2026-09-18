@@ -36,7 +36,7 @@ offset_right = 77.29031
 offset_bottom = -10.0
 scale = Vector2(0.62, 0.62)
 
-[node name="CreatureAttackManager" type="Node2D" parent="." unique_id=478384196]
+[node name="CreatureAttackManager" type="Node" parent="." unique_id=1289176407]
 script = ExtResource("2_spl83")
 
 [node name="CreatureBasicAttackTimer" type="Timer" parent="CreatureAttackManager" unique_id=1787095920]

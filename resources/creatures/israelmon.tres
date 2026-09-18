@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://bc3hog04n8mwb"]
 
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_5oylb"]
 [ext_resource type="Texture2D" uid="uid://bidrwitv0k2bg" path="res://assets/sprites/creatures/israelmon.png" id="1_brf0f"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_o2uan"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_o2uan"]
@@ -28,6 +29,7 @@ animations = [{
 
 [resource]
 script = ExtResource("2_o2uan")
+basic_attack = ExtResource("1_5oylb")
 special_skill = ExtResource("3_o2uan")
 creature_sprite_sheet = SubResource("SpriteFrames_yi1d6")
 creature_name = "Israelmon"
