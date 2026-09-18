@@ -1,13 +1,16 @@
 extends AttackBase
 class_name MeleeBaseAttack
 
+@export var dano: int
+@export var alcance: float
+@export var knockback_force: float
+@export var knockback_duration: float
+@export var attack_particle: PackedScene
 
 func executar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
-	print("Skill usada: ", skill_name) 
-	print("Cooldown: ", cooldown)
-	print("Cliquei em ", usuario.creature_dados.creature_name)
-	print("velocidade atual: ", usuario.creature_dados.creature_speed)
-	print("descrição da skill: ", skill_description)
-	print("hp atual", usuario.creature_dados.creature_current_hp)
-	print("hp maximo", usuario.creature_dados.creature_max_hp)
-	usuario.creature_dados.creature_speed = usuario.creature_dados.creature_speed - 10
+	alvo.creature_dados.receber_dano(usuario.creature_dados.creature_attack)
+
+	if(has_knockback):
+		var direcao := (alvo.global_position - usuario.global_position).normalized()
+		alvo.apply_knockback(direcao * knockback_force, knockback_duration)
+
