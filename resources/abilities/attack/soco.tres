@@ -1,10 +1,20 @@
 [gd_resource type="Resource" script_class="MeleeBaseAttack" format=3 uid="uid://dive66d8lf1on"]
 
 [ext_resource type="Script" uid="uid://c34ex22vee8ur" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
+[ext_resource type="Texture2D" uid="uid://bbye8c0qeba5o" path="res://icon.svg" id="2_dxjfd"]
+
+[sub_resource type="PackedScene" id="PackedScene_ytex0"]
 
 [resource]
 script = ExtResource("1_ytex0")
+dano = 10
+alcance = 1000.0
+knockback_force = 2000.0
+knockback_duration = 0.15
 skill_name = "soco"
-cooldown = 10000.0
+cooldown = 3.0
+has_knockback = true
 skill_description = "teste"
+skill_icon = ExtResource("2_dxjfd")
+attack_particle = SubResource("PackedScene_ytex0")
 metadata/_custom_type_script = "uid://c34ex22vee8ur"

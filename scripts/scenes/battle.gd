@@ -8,6 +8,3 @@ func _ready() -> void:
 	$CreaturePlayerUm.alvo = $CreatureCpuUm
 	$CreatureCpuUm.alvo = $CreaturePlayerUm
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -6,6 +6,7 @@ extends Resource
 @export var has_knockback: bool
 @export var skill_description: String
 @export var skill_icon: Texture2D
+@export var attack_particle: PackedScene
 
 
 func executar(usuario, alvo) -> void:
@@ -17,3 +18,4 @@ func executar(usuario, alvo) -> void:
 #	var efeito := attack_particle.instantiate()
 #	usuario.get_parent().add_child(efeito)
 #	efeito.global_position = usuario.global_position.lerp(alvo.global_position, 0.5)
+	

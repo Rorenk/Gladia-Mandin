@@ -12,7 +12,7 @@ var escala_base := 0.6
 var pode_andar := true
 var creature_dados: CreatureResource
 var alvo: CreatureBattleTemplate
-
+var is_in_knockback := false
 
 
 func _carregar_creature_data(dados: CreatureResource) -> void:
@@ -40,12 +40,32 @@ func _on_creature_battle_template_area_2d_mouse_exited() -> void:
 	sprite.frame = 0
 	pode_andar = true
 
+
+func apply_knockback(force: Vector2, duration: float) -> void:
+	is_in_knockback = true
+	var vel = force
+	var tempo_restante = duration
+
+	while tempo_restante > 0.0:
+		var delta = get_process_delta_time()
+		velocity = vel
+		move_and_slide()
+		vel = vel.move_toward(Vector2.ZERO, vel.length() / tempo_restante * delta)
+		tempo_restante -= delta
+		await get_tree().physics_frame
+
+		velocity = Vector2.ZERO
+		is_in_knockback = false
+
+
+
 func _physics_process(delta: float) -> void:
-	scale = Vector2.ONE * escala_base 
+	scale = Vector2.ONE * escala_base
 	if  alvo == null:
 		return
 	
 	attack_manager.use_skill(creature_dados.special_skill, self, alvo)
+	attack_manager.use_basic_attack(creature_dados.basic_attack, self, alvo)
 
 	nav_agent.target_position = alvo.global_position
 
