@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://g4wyfrdnvxvh"]
+
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_oyrmv"]
+[ext_resource type="Texture2D" uid="uid://c8l04bupoffol" path="res://assets/sprites/creatures/adachimonRemake.png" id="2_j67ah"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_sibxu"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_bcg8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bro1"]
+atlas = ExtResource("2_j67ah")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aja4r"]
+atlas = ExtResource("2_j67ah")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwb1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bro1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aja4r")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("3_sibxu")
+basic_attack = ExtResource("1_oyrmv")
+special_skill = ExtResource("4_bcg8w")
+creature_sprite_sheet = SubResource("SpriteFrames_fwb1d")
+creature_name = "AdachimonRemake"
+creature_max_hp = 300
+creature_attack = 100
+creature_defense = 100
+creature_special_attack = 100
+creature_special_defense = 100
+creature_speed = 50
+creature_luck = 10
+creature_form = 1
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"
