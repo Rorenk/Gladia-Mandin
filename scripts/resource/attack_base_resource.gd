@@ -1,6 +1,7 @@
 class_name AttackBase
 extends Resource
 
+@export var hitbox_shape: Shape2D
 @export var skill_name: String
 @export var cooldown: float
 @export var has_knockback: bool

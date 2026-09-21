@@ -6,12 +6,22 @@ class_name MeleeBaseAttack
 @export var knockback_force: float
 @export var knockback_duration: float
 
+const HITBOX_SCENE = preload("res://scenes/attack_hitbox.tscn")
+
 func executar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
 	print("Ataque usado: ", skill_name)
-	alvo.creature_dados.receber_dano(usuario.creature_dados.basic_attack.dano)
+	var direction := (usuario.alvo.global_position - usuario.global_position).normalized()
 
-	if(has_knockback):
-		var direcao := (alvo.global_position - usuario.global_position).normalized()
-		alvo.apply_knockback(direcao * knockback_force, knockback_duration)
+	var hitbox = HITBOX_SCENE.instantiate()
+	usuario.get_parent().add_child(hitbox)
+	hitbox.global_position = usuario.global_position + direction * alcance
+
+
+	if has_knockback:
+		hitbox.knockback_direcao = direcao
+		hitbox.knockback_force = knockback_force
+		hitbox.knockback_duration = knockback_duration
+
+	hitbox.hitbox_cofig(hitbox_shape, dano, hitbox_duration)
 
 	#_spawn_attack_particle(usuario, alvo)
