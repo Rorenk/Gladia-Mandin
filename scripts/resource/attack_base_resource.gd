@@ -8,10 +8,8 @@ extends Resource
 @export var skill_description: String
 @export var skill_icon: Texture2D
 @export var attack_particle: PackedScene
+@export var hitbox_duration: float = 0.15
 
-
-func executar(usuario, alvo) -> void:
-	pass
 
 #func _spawn_attack_particle(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
 #	if attack_particle == null:

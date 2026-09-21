@@ -10,8 +10,9 @@ size = Vector2(40, 40)
 
 [resource]
 script = ExtResource("1_ytex0")
-dano = 10
-alcance = 10.0
+damage = 1
+attack_range = 10.0
+knockback_force = 10.0
 knockback_duration = 0.15
 hitbox_shape = SubResource("RectangleShape2D_dxjfd")
 skill_name = "soco"
