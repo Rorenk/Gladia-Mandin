@@ -2,6 +2,7 @@ extends Node
 
 @onready var basic_attack_timer: Timer = $CreatureBasicAttackTimer
 @onready var skill_timer: Timer = $CreatureSkillTimer
+#@onready var creature_Battle_template_hitbox: Area2D = $"../CreatureBattleTemplateArea2D"
 
 func inicializar(skill: SkillBase, attack: AttackBase) -> void:
 	skill_timer.one_shot = true
@@ -14,7 +15,7 @@ func can_use_basic_attack() -> bool:
 
 func use_basic_attack(attack: AttackBase, usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
 	if not can_use_basic_attack(): return
-	attack.executar(usuario, alvo)
+	attack.atacar(usuario, alvo)
 	basic_attack_timer.start(attack.cooldown)
 
 

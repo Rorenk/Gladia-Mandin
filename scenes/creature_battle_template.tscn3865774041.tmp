@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bdrakfc7hh5kf"]
+
+[ext_resource type="Script" uid="uid://d2a75gvr063be" path="res://scripts/creature/creature_battle_template.gd" id="1_to62s"]
+[ext_resource type="Script" uid="uid://cm2i6tlr572ek" path="res://scripts/creature/creature_attack_manager.gd" id="2_spl83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a45g6"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iswlo"]
+radius = 14.0
+
+[node name="CreatureBattleTemplate" type="CharacterBody2D" unique_id=2000662877]
+position = Vector2(322, 152)
+script = ExtResource("1_to62s")
+
+[node name="CreatureHitboxCollisionShape2D" type="CollisionShape2D" parent="." unique_id=502968116]
+shape = SubResource("CircleShape2D_a45g6")
+debug_color = Color(0, 0.47280645, 0.5147358, 0.41960785)
+
+[node name="CreatureNavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=567298186]
+debug_enabled = true
+debug_path_custom_color = Color(0, 0, 0, 1)
+
+[node name="CreatureBattleTemplateAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1781743348]
+
+[node name="CreatureBattleTemplateArea2D" type="Area2D" parent="." unique_id=1158761457]
+
+[node name="CreatureBattleTemplateCollisionShape2D" type="CollisionShape2D" parent="CreatureBattleTemplateArea2D" unique_id=1898690428]
+shape = SubResource("CircleShape2D_iswlo")
+debug_color = Color(0.88550586, 0.6855914, 0, 0.41960785)
+
+[node name="CreatureTextureProgressBar" type="ProgressBar" parent="." unique_id=1429102386]
+offset_left = -34.0
+offset_top = -37.0
+offset_right = 77.29031
+offset_bottom = -10.0
+scale = Vector2(0.62, 0.62)
+
+[node name="CreatureAttackManager" type="Node" parent="." unique_id=1289176407]
+script = ExtResource("2_spl83")
+
+[node name="CreatureBasicAttackTimer" type="Timer" parent="CreatureAttackManager" unique_id=1787095920]
+
+[node name="CreatureSkillTimer" type="Timer" parent="CreatureAttackManager" unique_id=1696161759]
+
+[connection signal="input_event" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_input_event"]
+[connection signal="mouse_entered" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CreatureBattleTemplateArea2D" to="." method="_on_creature_battle_template_area_2d_mouse_exited"]

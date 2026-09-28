@@ -5,16 +5,14 @@
 
 [sub_resource type="PackedScene" id="PackedScene_ytex0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxjfd"]
-size = Vector2(40, 40)
 
 [resource]
 script = ExtResource("1_ytex0")
 damage = 10
-attack_range = 10.0
+attack_range = 50.0
 knockback_force = 1000.0
 knockback_duration = 0.15
-hitbox_shape = SubResource("RectangleShape2D_dxjfd")
+hitbox_shape = SubResource("CircleShape2D_dxjfd")
 skill_name = "soco"
 cooldown = 3.0
 has_knockback = true

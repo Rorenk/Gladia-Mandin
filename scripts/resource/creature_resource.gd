@@ -24,15 +24,16 @@ var creature_current_hp: int
 
 
 func inicializar() -> void:
-    creature_current_hp = creature_max_hp
+	creature_current_hp = creature_max_hp
 
 func receber_dano(quantidade: int) -> void:
-    creature_current_hp = max(0, creature_current_hp - quantidade)
-    hp_changed.emit()
+	creature_current_hp = max(0, creature_current_hp - quantidade)
+	hp_changed.emit()
+
+
 
 func curar(quantidade: int) -> void:
-    creature_current_hp = min(creature_max_hp, creature_current_hp + quantidade)
+	creature_current_hp = min(creature_max_hp, creature_current_hp + quantidade)
 
 func receber_afeito(quantidade: int) -> void:
-    creature_affection = clamp(creature_affection + quantidade, -100, 100) 
-
+	creature_affection = clamp(creature_affection + quantidade, -100, 100) 

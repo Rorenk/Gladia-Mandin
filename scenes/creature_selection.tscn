@@ -33,6 +33,7 @@ position = Vector2(325.00003, 97.99995)
 texture_repeat = 2
 use_parent_material = true
 texture = ExtResource("3_ig0a1")
+uv = PackedVector2Array(422.229, 130.04767)
 script = ExtResource("4_mowrr")
 
 [node name="Polygon2D" type="Polygon2D" parent="Polygon2D" unique_id=1849663969]
