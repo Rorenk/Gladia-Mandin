@@ -5,6 +5,7 @@
 
 [sub_resource type="PackedScene" id="PackedScene_ytex0"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxjfd"]
 
 [resource]
 script = ExtResource("1_ytex0")
