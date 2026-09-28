@@ -1,7 +1,7 @@
 extends Resource
 class_name CreatureResource
 
-#tipos de ataque de criatura para serem modificados diretamente no inspetor
+signal hp_changed
 
 var creature_affection: int = 0
 var creature_current_hp: int
@@ -28,6 +28,7 @@ func inicializar() -> void:
 
 func receber_dano(quantidade: int) -> void:
     creature_current_hp = max(0, creature_current_hp - quantidade)
+    hp_changed.emit()
 
 func curar(quantidade: int) -> void:
     creature_current_hp = min(creature_max_hp, creature_current_hp + quantidade)

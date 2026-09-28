@@ -9,6 +9,17 @@ radius = 14.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_iswlo"]
 radius = 14.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi1d6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x68nx"]
+bg_color = Color(0.8509804, 0.34117648, 0.3882353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
 [node name="CreatureBattleTemplate" type="CharacterBody2D" unique_id=2000662877]
 position = Vector2(322, 152)
 script = ExtResource("1_to62s")
@@ -29,12 +40,15 @@ debug_path_custom_color = Color(0, 0, 0, 1)
 shape = SubResource("CircleShape2D_iswlo")
 debug_color = Color(0.88550586, 0.6855914, 0, 0.41960785)
 
-[node name="CreatureTextureProgressBar" type="ProgressBar" parent="." unique_id=1429102386]
-offset_left = -34.0
-offset_top = -37.0
-offset_right = 77.29031
-offset_bottom = -10.0
+[node name="CreatureProgressBar" type="ProgressBar" parent="." unique_id=438736322]
+offset_left = -30.00001
+offset_top = -23.000004
+offset_right = 66.77419
+offset_bottom = -8.483875
 scale = Vector2(0.62, 0.62)
+theme_override_styles/background = SubResource("StyleBoxFlat_yi1d6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x68nx")
+show_percentage = false
 
 [node name="CreatureAttackManager" type="Node" parent="." unique_id=1289176407]
 script = ExtResource("2_spl83")

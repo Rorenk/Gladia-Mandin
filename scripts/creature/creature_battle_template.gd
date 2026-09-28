@@ -3,8 +3,11 @@ class_name CreatureBattleTemplate
 
 @onready var sprite: AnimatedSprite2D = $CreatureBattleTemplateAnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $CreatureNavigationAgent2D
-@onready var life_bar: ProgressBar = $CreatureTextureProgressBar
+@onready var life_bar: ProgressBar = $CreatureProgressBar
 @onready var attack_manager: Node = $CreatureAttackManager
+
+
+
 
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
@@ -18,12 +21,14 @@ var is_in_knockback := false
 func _carregar_creature_data(dados: CreatureResource) -> void:
 	creature_dados = dados
 	creature_dados.inicializar()
+	creature_dados.hp_changed.connect(update_life_bar)
 	attack_manager.inicializar(creature_dados.special_skill, creature_dados.basic_attack)
 	sprite.sprite_frames = dados.creature_sprite_sheet
 	print("Criatura carregada: ", creature_dados.creature_name)
-	lizar_life_bar()
+	update_life_bar()
 
-func lizar_life_bar() -> void:
+
+func update_life_bar() -> void:
 		life_bar.max_value = creature_dados.creature_max_hp
 		life_bar.value = creature_dados.creature_current_hp
 
@@ -66,6 +71,7 @@ func _physics_process(delta: float) -> void:
 	
 	attack_manager.use_skill(creature_dados.special_skill, self, alvo)
 	attack_manager.use_basic_attack(creature_dados.basic_attack, self, alvo)
+	
 
 	nav_agent.target_position = alvo.global_position
 
