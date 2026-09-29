@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bq3v3d2r5pj37"]
 
 [ext_resource type="Script" uid="uid://dlw50wwk26al" path="res://scripts/scenes/training.gd" id="1_p87tf"]
-[ext_resource type="Texture2D" uid="uid://1if3vcdvss5c" path="res://assets/sprites/backgrounds/water-witch-studio-passing-time-bedroom-by-water-witch-rpg-studio.jpg" id="3_j5vqi"]
+[ext_resource type="Texture2D" uid="uid://d3y8vlb01yton" path="res://assets/sprites/backgrounds/water-witch-studio-passing-time-bedroom-by-water-witch-rpg-studio.jpg" id="3_j5vqi"]
 [ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="3_v2b7k"]
 [ext_resource type="Script" uid="uid://e2teovvu2hkq" path="res://scripts/scenes/change_sprites.gd" id="4_oxk6x"]
 
@@ -18,13 +18,13 @@ load_path = "res://.godot/imported/cenario_editado.png-6d3632176e5038425b04752d3
 radius = 43.07898
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnnu"]
-size = Vector2(16, 1080)
+size = Vector2(40, 1080)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3yf8"]
 size = Vector2(3020.5, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1i4hq"]
-size = Vector2(15, 1094)
+size = Vector2(36, 1094)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hajsk"]
 size = Vector2(3015, 56)
@@ -74,7 +74,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2108445036]
-position = Vector2(0, 506)
+position = Vector2(12, 506)
 shape = SubResource("RectangleShape2D_4mnnu")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2093301448 groups=["limite"]]
@@ -90,7 +90,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1827057771]
-position = Vector2(3002.5, 540)
+position = Vector2(2992, 540)
 shape = SubResource("RectangleShape2D_1i4hq")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1409325428 groups=["limite"]]
