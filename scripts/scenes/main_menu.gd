@@ -1,5 +1,7 @@
 extends Node2D
 
+var test :int = 1
+
 func _ready():
 	MusicController.play_music()
 
