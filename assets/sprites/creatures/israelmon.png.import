@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dq7r2e0ojwswa"
+=======
+uid="uid://tkudi82dqjjx"
+>>>>>>> 52d5fa1f74ef59493b13205e3612555e2401edee
 path="res://.godot/imported/israelmon.png-c64c38a6386b9908e0bb02beb93c026b.ctex"
 metadata={
 "vram_texture": false

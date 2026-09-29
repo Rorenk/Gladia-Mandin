@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://chskj80o8gpgs"
+=======
+uid="uid://c8l04bupoffol"
+>>>>>>> 52d5fa1f74ef59493b13205e3612555e2401edee
 path="res://.godot/imported/adachimonRemake.png-ac638d479d53b492808c6d98a2458d8a.ctex"
 metadata={
 "vram_texture": false
