@@ -7,10 +7,7 @@
 export.cfg
 export_credentials.cfg
 *.tmp
-<<<<<<< HEAD
 *.uid
-=======
->>>>>>> fdb07debf8e7f5672e1912e368a3282b90173497
 
 # Imported translations (automatically generated from CSV files)
 *.translation
