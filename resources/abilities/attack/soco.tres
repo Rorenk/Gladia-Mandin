@@ -10,7 +10,7 @@
 [resource]
 script = ExtResource("1_ytex0")
 damage = 10
-attack_range = 50.0
+attack_range = 20.0
 knockback_force = 1000.0
 knockback_duration = 0.15
 hitbox_shape = SubResource("CircleShape2D_dxjfd")
