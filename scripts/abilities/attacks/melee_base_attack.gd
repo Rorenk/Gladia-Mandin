@@ -6,7 +6,6 @@ class_name MeleeBaseAttack
 @export var knockback_force: float
 @export var knockback_duration: float
 
-
 const HITBOX_SCENE = preload("res://scenes/attack_hitbox.tscn")
 
 func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
@@ -18,14 +17,12 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 
 	var direction := (usuario.alvo.global_position - usuario.global_position).normalized()
 
-
 	var hitbox = HITBOX_SCENE.instantiate()
 	usuario.get_parent().add_child(hitbox)
 	var offset: float = min(distancia, attack_range)
 	hitbox.global_position = usuario.global_position + direction * offset
 	hitbox.collision_layer = 0
 	hitbox.collision_mask = usuario.inimigos_mask
-
 
 	if has_knockback:
 		hitbox.knockback_direction = direction
