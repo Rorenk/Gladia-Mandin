@@ -9,7 +9,11 @@ class_name MeleeBaseAttack
 
 const HITBOX_SCENE = preload("res://scenes/attack_hitbox.tscn")
 
-func executar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
+func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
+	var distancia := usuario.global_position.distance_to(alvo.global_position)
+	if distancia > attack_range:
+		return
+		
 	print("Ataque usado: ", skill_name)
 
 	var direction := (usuario.alvo.global_position - usuario.global_position).normalized()
@@ -17,7 +21,11 @@ func executar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> 
 
 	var hitbox = HITBOX_SCENE.instantiate()
 	usuario.get_parent().add_child(hitbox)
-	hitbox.global_position = usuario.global_position + direction * attack_range
+	var offset: float = min(distancia, attack_range)
+	hitbox.global_position = usuario.global_position + direction * offset
+	hitbox.collision_layer = 0
+	hitbox.collision_mask = usuario.inimigos_mask
+
 
 	if has_knockback:
 		hitbox.knockback_direction = direction
