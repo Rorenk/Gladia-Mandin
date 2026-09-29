@@ -27,7 +27,7 @@ func _pegar_lista_de_creatures() -> Array:
 	for arquivo in arquivos:
 		if arquivo.ends_with(".tres"):
 			var creature: CreatureResource = load("res://resources/creatures/" + arquivo)
-			if creature.creature_form =	= creature_form_sort:
+			if creature.creature_form == creature_form_sort:
 				creatures.append(creature)
 	return creatures
 

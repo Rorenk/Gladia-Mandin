@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bq3v3d2r5pj37"]
+
+[ext_resource type="Script" uid="uid://dlw50wwk26al" path="res://scripts/scenes/training.gd" id="1_p87tf"]
+[ext_resource type="Texture2D" uid="uid://1if3vcdvss5c" path="res://assets/sprites/backgrounds/water-witch-studio-passing-time-bedroom-by-water-witch-rpg-studio.jpg" id="3_j5vqi"]
+[ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="3_v2b7k"]
+[ext_resource type="Script" uid="uid://e2teovvu2hkq" path="res://scripts/scenes/change_sprites.gd" id="4_oxk6x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4mnnu"]
+radius = 14.000061
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oxk6x"]
+load_path = "res://.godot/imported/water-witch-studio-passing-time-bedroom-by-water-witch-rpg-studio.jpg-b60f4bd0c37fadb9ee739ad369df2d57.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooikh"]
+load_path = "res://.godot/imported/cenario_editado.png-6d3632176e5038425b04752d3b1efeba.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vf4ef"]
+radius = 43.07898
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnnu"]
+size = Vector2(16, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3yf8"]
+size = Vector2(3020.5, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1i4hq"]
+size = Vector2(15, 1094)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hajsk"]
+size = Vector2(3015, 56)
+
+[node name="Training" type="Node2D" unique_id=925857319]
+script = ExtResource("1_p87tf")
+
+[node name="CreaturePlayerUm" parent="." unique_id=2000662877 instance=ExtResource("3_v2b7k")]
+top_level = true
+position = Vector2(349.99994, 548.99994)
+scale = Vector2(0.99999994, 0.99999994)
+collision_mask = 3
+wall_min_slide_angle = 0.20594884
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CreaturePlayerUm" unique_id=1993215894]
+shape = SubResource("CircleShape2D_4mnnu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2129786751]
+position = Vector2(960, 540)
+
+[node name="BackgroundPT1" type="Sprite2D" parent="." unique_id=1958072296]
+position = Vector2(1500.4999, 540)
+scale = Vector2(2.344531, 1.5)
+texture = ExtResource("3_j5vqi")
+script = ExtResource("4_oxk6x")
+textura_normal = SubResource("CompressedTexture2D_oxk6x")
+textura_hover = SubResource("CompressedTexture2D_ooikh")
+texto_hover = "Treinamento da mente, + 1 de sexo"
+
+[node name="Area2D" type="Area2D" parent="BackgroundPT1" unique_id=298013884]
+position = Vector2(296.64783, 69.33333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundPT1/Area2D" unique_id=1503928207]
+position = Vector2(-4.6917586, 7.333353)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("CircleShape2D_vf4ef")
+
+[node name="Label" type="Label" parent="BackgroundPT1" unique_id=516839794]
+offset_left = 198.1207
+offset_top = -41.999996
+offset_right = 373.12073
+offset_bottom = -18.999996
+text = "a"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=866512015 groups=["limite"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2108445036]
+position = Vector2(0, 506)
+shape = SubResource("RectangleShape2D_4mnnu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2093301448 groups=["limite"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=769067387]
+position = Vector2(1495.75, 0)
+shape = SubResource("RectangleShape2D_w3yf8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1709424133 groups=["limite"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1827057771]
+position = Vector2(3002.5, 540)
+shape = SubResource("RectangleShape2D_1i4hq")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1409325428 groups=["limite"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1973951542]
+position = Vector2(1502.5, 1059)
+shape = SubResource("RectangleShape2D_hajsk")
+
+[connection signal="body_entered" from="BackgroundPT1/Area2D" to="BackgroundPT1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="BackgroundPT1/Area2D" to="BackgroundPT1" method="_on_area_2d_body_exited"]

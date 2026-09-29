@@ -39,3 +39,12 @@ script = ExtResource("4_mowrr")
 z_index = 2
 invert_border = 0.1
 script = ExtResource("5_nb3ya")
+
+[node name="Button" type="Button" parent="." unique_id=663756655]
+offset_left = 17.000002
+offset_top = 14.999997
+offset_right = 85.4241
+offset_bottom = 46.4241
+text = "Refresh"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_refresh_pressed"]

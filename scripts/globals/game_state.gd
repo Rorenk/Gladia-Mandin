@@ -1,7 +1,7 @@
 extends Node2D
 
 var creature_escolhida: CreatureResource = null
+var treinamento: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass

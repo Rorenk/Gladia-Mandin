@@ -42,7 +42,12 @@ text = "Sair"
 layout_mode = 2
 text = "Creditos"
 
+[node name="Treinamento" type="Button" parent="Button_Manager/VBoxContainer" unique_id=1133995364]
+layout_mode = 2
+text = "Treinamento"
+
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Opções" to="." method="_on_opções_pressed"]
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Button_Manager/VBoxContainer/Treinamento" to="." method="_on_treinamento_pressed"]

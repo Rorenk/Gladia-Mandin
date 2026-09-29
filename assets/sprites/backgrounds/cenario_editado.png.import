@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d05eo4rh42voa"
-path="res://.godot/imported/Sprite-0001.png-f585b76cc520d0b03ecc2ffd0c9abe62.ctex"
+uid="uid://02s4r0ed51wb"
+path="res://.godot/imported/cenario_editado.png-6d3632176e5038425b04752d3b1efeba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/creatures/Sprite-0001.png"
-dest_files=["res://.godot/imported/Sprite-0001.png-f585b76cc520d0b03ecc2ffd0c9abe62.ctex"]
+source_file="res://assets/sprites/backgrounds/cenario_editado.png"
+dest_files=["res://.godot/imported/cenario_editado.png-6d3632176e5038425b04752d3b1efeba.ctex"]
 
 [params]
 

@@ -8,4 +8,3 @@ func _ready() -> void:
 func play_music():
 	if not $bgmusic.playing:
 		$bgmusic.play()
-
