@@ -6,6 +6,10 @@ class_name CreatureBattleTemplate
 @onready var life_bar: ProgressBar = $CreatureProgressBar
 @onready var attack_manager: Node = $CreatureAttackManager
 
+@export var hop_altura := 6.0
+@export var hop_distancia := 40.0
+@export var hop_squash := 0.08
+@export var hop_velocidade := 2.0
 
 
 
@@ -17,6 +21,9 @@ var creature_dados: CreatureResource
 var alvo: CreatureBattleTemplate
 var is_in_knockback := false
 var inimigos_mask := 0
+var _hop_fase := 0.0
+var _sprite_pos_base := Vector2.ZERO
+var _sprite_scale_base := Vector2.ONE
 
 
 func _carregar_creature_data(dados: CreatureResource) -> void:
@@ -35,6 +42,8 @@ func update_life_bar() -> void:
 
 
 func _ready() -> void:
+	_sprite_pos_base = sprite.position
+	_sprite_scale_base = sprite.scale
 	_sortear_nova_direcao()
 
 func _on_creature_battle_template_area_2d_mouse_entered() -> void:
@@ -63,9 +72,11 @@ func apply_knockback(force: Vector2, duration: float) -> void:
 		velocity = Vector2.ZERO
 		is_in_knockback = false
 
-
+func _process(delta: float) -> void:
+	_atualizar_pulinho(delta)
 
 func _physics_process(delta: float) -> void:
+	if is_in_knockback: return
 	scale = Vector2.ONE * escala_base
 	if  alvo == null:
 		return
@@ -109,5 +120,24 @@ func definir_time(meu_time: int, times_inimigos: Array) -> void:
 	for t in times_inimigos:
 		set_collision_mask_value(t, true)
 		inimigos_mask |= 1 << (t - 1)
+		
+		
+		
+func _atualizar_pulinho(delta: float) -> void:
+	var vel := 0.0
+	if alvo != null and not is_in_knockback:
+		vel = velocity.length()
 
-#fazer uma função pra barra de vida aqui
+	if vel > 5.0:
+		# a fase avança pela distância percorrida, não pelo tempo
+		_hop_fase = fmod(_hop_fase + vel * hop_velocidade * delta / hop_distancia, 1.0)
+		var hop := sin(_hop_fase * PI)   # 0 → 1 → 0 a cada pulinho
+		sprite.position.y = _sprite_pos_base.y - hop * hop_altura
+		var s := hop_squash * (hop - 0.5) * 2.0   # estica no ar, achata ao pousar
+		sprite.scale = Vector2(_sprite_scale_base.x * (1.0 - s * 0.5), _sprite_scale_base.y * (1.0 + s))
+	else:
+		# parado: volta suavemente ao repouso
+		_hop_fase = 0.0
+		var t := 1.0 - exp(-12.0 * delta)
+		sprite.position = sprite.position.lerp(_sprite_pos_base, t)
+		sprite.scale = sprite.scale.lerp(_sprite_scale_base, t)

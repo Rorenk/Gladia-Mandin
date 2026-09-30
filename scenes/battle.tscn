@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwr15h4soraf" path="res://scripts/scenes/battle.gd" id="1_th188"]
 [ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="3_p1qf1"]
-[ext_resource type="Texture2D" uid="uid://lwtw1h7xuik4" path="res://assets/sprites/creatures/boobmon.png" id="4_a12nh"]
+[ext_resource type="Texture2D" uid="uid://cltkou5b8srpb" path="res://assets/sprites/creatures/boobmon.png" id="4_a12nh"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_30odb"]
 vertices = PackedVector2Array(182, 282, 234, 282, 138, 298, 458, 298, 609, 336, 394, 336, 406, 298, 394, 262, 406, 246, 234, 90, 234, 38, 342, 27, 342, 166, 294, 166, 28.96875, 27, 182, 38, 218, 186, 218, 134, 294, 218, 234, 230, 182, 230, 138, 246, 166, 186, 182, 90, 166, 134, 609, 27, 458, 246, 394, 218, 394, 27, 342, 262, 342, 336, 28.03125, 336, 86, 298, 86, 246)
@@ -49,6 +49,7 @@ tile_set = SubResource("TileSet_l6fsk")
 [node name="CreaturePlayerUm" parent="." unique_id=2000662877 instance=ExtResource("3_p1qf1")]
 position = Vector2(582, 301)
 scale = Vector2(0.99999994, 0.99999994)
+hop_velocidade = 100.0
 
 [node name="CreatureCpuUm" parent="." unique_id=1567605967 instance=ExtResource("3_p1qf1")]
 position = Vector2(63, 61)
