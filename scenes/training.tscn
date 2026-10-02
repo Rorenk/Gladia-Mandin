@@ -18,7 +18,7 @@ load_path = "res://.godot/imported/cenario_editado.png-6d3632176e5038425b04752d3
 radius = 43.07898
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnnu"]
-size = Vector2(40, 1080)
+size = Vector2(40, 1114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3yf8"]
 size = Vector2(3020.5, 14)
@@ -74,7 +74,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2108445036]
-position = Vector2(12, 506)
+position = Vector2(-21, 522)
 shape = SubResource("RectangleShape2D_4mnnu")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2093301448 groups=["limite"]]
@@ -82,7 +82,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=769067387]
-position = Vector2(1495.75, 0)
+position = Vector2(1495, -8)
 shape = SubResource("RectangleShape2D_w3yf8")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1709424133 groups=["limite"]]
@@ -90,7 +90,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1827057771]
-position = Vector2(2992, 540)
+position = Vector2(3019, 541)
 shape = SubResource("RectangleShape2D_1i4hq")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1409325428 groups=["limite"]]
@@ -98,7 +98,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1973951542]
-position = Vector2(1502.5, 1059)
+position = Vector2(1501, 1107)
 shape = SubResource("RectangleShape2D_hajsk")
 
 [connection signal="body_entered" from="BackgroundPT1/Area2D" to="BackgroundPT1" method="_on_area_2d_body_entered"]
