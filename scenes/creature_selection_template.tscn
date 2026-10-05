@@ -8,6 +8,16 @@ radius = 13.552948
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ef5n"]
 radius = 14.0
 
+[sub_resource type="Gradient" id="Gradient_52phs"]
+offsets = PackedFloat32Array(0, 0.2728938, 0.64285713, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.7234432, 0.7234432, 0.7234432, 1, 0.3901099, 0.3901099, 0.3901099, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ejq7b"]
+gradient = SubResource("Gradient_52phs")
+fill = 1
+fill_from = Vector2(0.51706487, 0.46928328)
+fill_to = Vector2(0.8651877, 0.16211604)
+
 [node name="CreatureSelectionTemplate" type="CharacterBody2D" unique_id=1029222603]
 position = Vector2(329.00003, 171.00002)
 scale = Vector2(2.65625, 2.59375)
@@ -28,6 +38,11 @@ position = Vector2(-1.4305115e-06, -1.2636185e-05)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("CircleShape2D_7ef5n")
 debug_color = Color(0.6753601, 0.50514656, 0, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=965218308]
+position = Vector2(0, 15)
+enabled = false
+texture = SubResource("GradientTexture2D_ejq7b")
 
 [connection signal="input_event" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_selection_template_area_2d_input_event"]
 [connection signal="mouse_entered" from="CreatureSelectionTemplateArea2D" to="." method="_on_creature_template_area_2d_mouse_entered"]

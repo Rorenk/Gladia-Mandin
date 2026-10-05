@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name CreatureSelectionTemplate
 
 @onready var sprite: AnimatedSprite2D = $CreatureSelectionTemplateAnimatedSprite2D
-
+@onready var spotlight: PointLight2D = $PointLight2D
 
 var velocidade := 15.0
 var direcao := Vector2.ZERO
@@ -28,11 +28,14 @@ func _ready() -> void:
 func _on_creature_template_area_2d_mouse_entered() -> void:
 	sprite.frame = 1
 	pode_andar = false
+	spotlight.enabled = true
+	
 
 
 func _on_creature_template_area_2d_mouse_exited() -> void:
 	sprite.frame = 0
 	pode_andar = true
+	spotlight.enabled = false
 
 func _physics_process(delta: float) -> void:
 	if not pode_andar:
