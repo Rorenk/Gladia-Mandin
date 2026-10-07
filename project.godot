@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://vtnhb7lgmfqm"
 
 [autoload]
 
-GameState="*uid://dyqik257e83u5"
+GameState="*uid://jhs86ch8x7no"
 MusicController="*uid://cvlall41eb1bj"
 SFXController="*uid://c32nq4wrq5gi2"
 
@@ -39,4 +39,5 @@ window/stretch/scale_mode="integer"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

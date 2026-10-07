@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MeleeBaseAttack" format=3 uid="uid://dive66d8lf1on"]
 
-[ext_resource type="Script" uid="uid://c34ex22vee8ur" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
-[ext_resource type="Texture2D" uid="uid://bbye8c0qeba5o" path="res://icon.svg" id="2_dxjfd"]
+[ext_resource type="Script" uid="uid://bppgqh6volnt7" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
+[ext_resource type="Texture2D" uid="uid://b5i776hnv57al" path="res://icon.svg" id="2_dxjfd"]
 
 [sub_resource type="PackedScene" id="PackedScene_ytex0"]
 
@@ -20,4 +20,3 @@ has_knockback = true
 skill_description = "teste"
 skill_icon = ExtResource("2_dxjfd")
 attack_particle = SubResource("PackedScene_ytex0")
-metadata/_custom_type_script = "uid://c34ex22vee8ur"

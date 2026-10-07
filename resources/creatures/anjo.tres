@@ -1,26 +1,16 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://djs87r2kqk4yi"]
 
 [ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_pscaj"]
-[ext_resource type="Texture2D" uid="uid://cefmjnw4ma7go" path="res://assets/sprites/creatures/anjoRedimensao1.png" id="2_1la7a"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_pscaj"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_1la7a"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_oqaog"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_1la7a")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="SpriteFrames" id="SpriteFrames_bl21q"]
 
 [resource]
 script = ExtResource("2_pscaj")
 basic_attack = ExtResource("1_pscaj")
 special_skill = ExtResource("3_1la7a")
-creature_sprite_sheet = SubResource("SpriteFrames_oqaog")
+creature_sprite_sheet = SubResource("SpriteFrames_bl21q")
 creature_name = "Anjico"
 creature_speed = 100
 creature_form = 1

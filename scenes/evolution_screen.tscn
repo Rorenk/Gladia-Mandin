@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dpjkejktyymli"]
+
+[ext_resource type="Script" uid="uid://765yrwd2ykjx" path="res://scripts/scenes/evolution_screen.gd" id="1_si12h"]
+[ext_resource type="Script" uid="uid://bagn4t83tpxsp" path="res://scripts/affects/evolution_effect.gd" id="2_1xh4j"]
+[ext_resource type="Resource" uid="uid://h8la7idvjbcc" path="res://resources/creatures/ashemon.tres" id="2_ciaac"]
+[ext_resource type="Resource" uid="uid://ywyfxk3d5p0" path="res://resources/creatures/maiscriativomon.tres" id="3_ciaac"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqs4r"]
+
+[node name="EvolutionScreen" type="Node2D" unique_id=1439223510]
+script = ExtResource("1_si12h")
+criatura_pre = ExtResource("2_ciaac")
+criatura_pos = ExtResource("3_ciaac")
+
+[node name="PreEvolutionSprite2D" type="AnimatedSprite2D" parent="." unique_id=1332837525]
+position = Vector2(84, 172)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_tqs4r")
+
+[node name="CentroCena" type="Marker2D" parent="." unique_id=1734413126]
+position = Vector2(317, 176)
+
+[node name="PosEvolutionSprite2D" type="AnimatedSprite2D" parent="." unique_id=985987998]
+position = Vector2(547, 172)
+scale = Vector2(4, 4)
+
+[node name="EvolutionEffect" type="Node2D" parent="." unique_id=630681189]
+position = Vector2(11, 7)
+script = ExtResource("2_1xh4j")

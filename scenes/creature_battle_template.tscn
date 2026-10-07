@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdrakfc7hh5kf"]
 
-[ext_resource type="Script" uid="uid://d2a75gvr063be" path="res://scripts/creature/creature_battle_template.gd" id="1_to62s"]
-[ext_resource type="Script" uid="uid://cm2i6tlr572ek" path="res://scripts/creature/creature_attack_manager.gd" id="2_spl83"]
+[ext_resource type="Script" uid="uid://17quymxg4mc4" path="res://scripts/creature/creature_battle_template.gd" id="1_to62s"]
+[ext_resource type="Script" uid="uid://c7yin7txlm3pu" path="res://scripts/creature/creature_attack_manager.gd" id="2_spl83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a45g6"]
 radius = 14.0
