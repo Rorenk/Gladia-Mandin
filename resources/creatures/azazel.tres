@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://c45dtu3pg81ri"]
+
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_vlxqt"]
+[ext_resource type="Texture2D" uid="uid://ceitgv8bv2rco" path="res://assets/sprites/creatures/anjo.png" id="2_idkkj"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_hhbxa"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_idkkj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02n4o"]
+atlas = ExtResource("2_idkkj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rom3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02n4o")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("3_hhbxa")
+basic_attack = ExtResource("1_vlxqt")
+special_skill = ExtResource("4_idkkj")
+creature_sprite_sheet = SubResource("SpriteFrames_rom3b")
+creature_name = "aaa"
+creature_max_hp = 100
+creature_attack = 1
+creature_defense = 1
+creature_special_attack = 1
+creature_special_defense = 1
+creature_speed = 11
+creature_luck = 1
+creature_form = 2
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"

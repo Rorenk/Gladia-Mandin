@@ -12,7 +12,7 @@ signal evolution_finished
 @export var leave_time := 3.0
 @export_range(0.0, 1.0) var build_starts_at := 0.5
 @export var build_time := 3.0
-    @export var flight_time := 0.6
+@export var flight_time := 0.6
 
 var _sprite_particles: Array[Dictionary] = []
 var _time := 0.0
@@ -36,7 +36,7 @@ func play_evolution(pre_evolution_sprite: SpriteFrames, post_evolution_sprite: S
 	var top_first := func(a, b):
 		if absf(a.position.y - b.position.y) > 0.01:
 			return a.position.y < b.position.y
-		return a.position.x < b.position.xs
+		return a.position.x < b.position.x
 	extracted_pre.sort_custom(bottom_first)
 	extracted_post.sort_custom(top_first)
 
