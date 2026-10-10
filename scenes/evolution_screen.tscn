@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://765yrwd2ykjx" path="res://scripts/scenes/evolution_screen.gd" id="1_si12h"]
 [ext_resource type="Script" uid="uid://bagn4t83tpxsp" path="res://scripts/affects/evolution_effect.gd" id="2_1xh4j"]
 [ext_resource type="Resource" uid="uid://h8la7idvjbcc" path="res://resources/creatures/ashemon.tres" id="2_ciaac"]
-[ext_resource type="Resource" uid="uid://ywyfxk3d5p0" path="res://resources/creatures/maiscriativomon.tres" id="3_ciaac"]
+[ext_resource type="Resource" uid="uid://biqonvl1kmjg0" path="res://resources/creatures/quelomon.tres" id="3_ciaac"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tqs4r"]
 

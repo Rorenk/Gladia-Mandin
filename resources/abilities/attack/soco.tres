@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MeleeBaseAttack" format=3 uid="uid://dive66d8lf1on"]
 
-[ext_resource type="Script" uid="uid://bppgqh6volnt7" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
+[ext_resource type="Script" uid="uid://dgcku7hl1wfxi" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
 [ext_resource type="Texture2D" uid="uid://b5i776hnv57al" path="res://icon.svg" id="2_dxjfd"]
 
 [sub_resource type="PackedScene" id="PackedScene_ytex0"]

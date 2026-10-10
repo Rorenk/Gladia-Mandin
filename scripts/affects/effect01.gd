@@ -1,5 +1,4 @@
 extends Node2D
-class_name EvolutionEffect
 
 signal evolution_finished
 
