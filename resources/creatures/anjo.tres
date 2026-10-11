@@ -1,26 +1,40 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://djs87r2kqk4yi"]
 
 [ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_pscaj"]
-[ext_resource type="Texture2D" uid="uid://ddfek8pldrin3" path="res://assets/sprites/creatures/anjo-export.png" id="2_1la7a"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_pscaj"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_1la7a"]
+[ext_resource type="Texture2D" uid="uid://dlsadqy018w17" path="res://assets/sprites/creatures/anjotruemon.png" id="3_phwh2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_phwh2"]
-atlas = ExtResource("2_1la7a")
-region = Rect2(0, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jep20"]
+atlas = ExtResource("3_phwh2")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w0t7p"]
-atlas = ExtResource("2_1la7a")
-region = Rect2(0, 80, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwd0y"]
+atlas = ExtResource("3_phwh2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flhm5"]
+atlas = ExtResource("3_phwh2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ov8o"]
+atlas = ExtResource("3_phwh2")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bl21q"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_phwh2")
+"texture": SubResource("AtlasTexture_jep20")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w0t7p")
+"texture": SubResource("AtlasTexture_uwd0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flhm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ov8o")
 }],
 "loop": 1,
 "name": &"default",
@@ -33,6 +47,11 @@ basic_attack = ExtResource("1_pscaj")
 special_skill = ExtResource("3_1la7a")
 creature_sprite_sheet = SubResource("SpriteFrames_bl21q")
 creature_name = "Anjico"
+creature_max_hp = 100
+creature_attack = 10
+creature_defense = 10
+creature_special_attack = 10
+creature_special_defense = 10
 creature_speed = 100
 creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"
