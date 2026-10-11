@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bwr15h4soraf" path="res://scripts/scenes/battle.gd" id="1_th188"]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 [ext_resource type="Texture2D" uid="uid://nh6e5t5n3j4" path="res://assets/sprites/creatures/quelomon.png" id="3_6vh42"]
 [ext_resource type="Texture2D" uid="uid://d3eg3u35uset0" path="res://assets/sprites/tilesets/blue_tint_Grass_Tile_Layers3.png" id="3_a12nh"]
 [ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="3_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://cltkou5b8srpb" path="res://assets/sprites/creatures/boobmon.png" id="4_a12nh"]
 [ext_resource type="Texture2D" uid="uid://dhdl46dwapoty" path="res://assets/sprites/creatures/Sprite-0004.png" id="5_4k1nj"]
 [ext_resource type="Texture2D" uid="uid://cwgc8xxyncgtw" path="res://assets/sprites/tilesets/snowbattletilest.png" id="6_4k1nj"]
+<<<<<<< HEAD
 =======
 [ext_resource type="Texture2D" uid="uid://kp2o5nm23u2e" path="res://assets/sprites/tilesets/Piknik basket.png" id="2_22uqi"]
 [ext_resource type="Texture2D" uid="uid://dy8ghpku2n4rc" path="res://assets/sprites/tilesets/Birch wood Biom.png" id="3_66ngm"]
@@ -19,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://bi3kfgw5o67wi" path="res://assets/sprites/tilesets/dungeon_walls_decor_gates.png" id="6_22uqi"]
 [ext_resource type="Texture2D" uid="uid://b0p3i40avcx36" path="res://assets/sprites/tilesets/Rocks.png" id="8_vceff"]
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_30odb"]
 vertices = PackedVector2Array(106, 154, 106, 86, 624.21094, 16.921875, 631.7578, 353.9297, 58, 12.421875, 58, 42, 38, 86, 13.5625, 42, 17.859375, 350.0625, 38, 154)
@@ -27,6 +33,9 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(3, 2, 8, 360, 642, 364,
 parsed_geometry_type = 1
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4pi3"]
 texture = ExtResource("4_a12nh")
 =======
@@ -36,10 +45,14 @@ texture = ExtResource("2_22uqi")
 0:0/0 = 0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yahae"]
 texture = ExtResource("3_6vh42")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7i3o"]
+<<<<<<< HEAD
 =======
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66ngm"]
 texture = ExtResource("3_66ngm")
@@ -82,6 +95,8 @@ texture = ExtResource("3_66ngm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1m01a"]
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 texture = ExtResource("3_a12nh")
 0:0/0 = 0
 1:0/0 = 0
@@ -682,6 +697,7 @@ texture = ExtResource("6_22uqi")
 5:6/0 = 0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66ngm"]
 texture = ExtResource("5_4k1nj")
 =======
@@ -700,10 +716,15 @@ sources/5 = SubResource("TileSetAtlasSource_fpf3k")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4u087"]
 texture = ExtResource("3_66ngm")
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66ngm"]
+texture = ExtResource("5_4k1nj")
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 4:0/0 = 0
 5:0/0 = 0
@@ -715,12 +736,17 @@ texture = ExtResource("3_66ngm")
 9:0/0 = 0
 9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+4:0/0 = 0
+5:0/0 = 0
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03edq"]
@@ -822,6 +848,11 @@ texture = ExtResource("5_03edq")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekamt"]
 texture = ExtResource("3_a12nh")
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03edq"]
+texture = ExtResource("6_4k1nj")
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -865,9 +896,12 @@ texture = ExtResource("3_a12nh")
 9:3/0 = 0
 10:3/0 = 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 1:4/0 = 0
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 4:4/0 = 0
 5:4/0 = 0
 6:4/0 = 0
@@ -1066,6 +1100,9 @@ texture = ExtResource("3_a12nh")
 9:24/0 = 0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 [sub_resource type="TileSet" id="TileSet_l6fsk"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f4pi3")
@@ -1073,6 +1110,7 @@ sources/2 = SubResource("TileSetAtlasSource_v7i3o")
 sources/1 = SubResource("TileSetAtlasSource_yahae")
 sources/3 = SubResource("TileSetAtlasSource_66ngm")
 sources/4 = SubResource("TileSetAtlasSource_03edq")
+<<<<<<< HEAD
 =======
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0caf"]
 texture = ExtResource("6_22uqi")
@@ -1143,6 +1181,8 @@ sources/7 = SubResource("TileSetAtlasSource_p0caf")
 sources/8 = SubResource("TileSetAtlasSource_61i1y")
 sources/9 = SubResource("TileSetAtlasSource_saiin")
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
 
 [node name="Battle" type="Node2D" unique_id=1401582562]
 position = Vector2(-5, -3)
@@ -1171,6 +1211,7 @@ hop_velocidade = 100.0
 
 [node name="CreatureCpuUm" parent="." unique_id=1567605967 instance=ExtResource("3_p1qf1")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 position = Vector2(64, 54)
 =======
 position = Vector2(44, 25)
@@ -1179,3 +1220,7 @@ position = Vector2(44, 25)
 position = Vector2(323, 183)
 script = ExtResource("5_lpir7")
 >>>>>>> e346b23 (Add: Forest scene, battle cam)
+=======
+position = Vector2(64, 54)
+>>>>>>> 8dfc6de456de58a9deb8e89995b1738c0dd3b695
+z
