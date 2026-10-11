@@ -12,4 +12,4 @@ func _ready() -> void:
 	
 	$CreaturePlayerUm.definir_time(time_player, [time_cpu])
 	$CreatureCpuUm.definir_time(time_cpu, [time_player])
-	
+	$Camera2D.definir_alvos([$CreaturePlayerUm, $CreatureCpuUm])

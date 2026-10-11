@@ -15,7 +15,7 @@ class_name CreatureBattleTemplate
 
 var direcao := Vector2.ZERO
 var trocar_direcao_timer := 0.0
-var escala_base := 0.6
+var escala_base := 2.0
 var pode_andar := true
 var creature_dados: CreatureResource
 var alvo: CreatureBattleTemplate
