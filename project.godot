@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://vtnhb7lgmfqm"
 
 [autoload]
 
-GameState="*uid://jhs86ch8x7no"
+GameState="*uid://dyqik257e83u5"
 MusicController="*uid://cvlall41eb1bj"
 SFXController="*uid://c32nq4wrq5gi2"
 
