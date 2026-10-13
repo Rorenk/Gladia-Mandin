@@ -18,7 +18,8 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 
 	var direction := (usuario.alvo.global_position - usuario.global_position).normalized()
 	
-	var hitbox = HITBOX_SCENE.instantiate() 
+	var hitbox = HITBOX_SCENE.instantiate() #criar a função process pra fazer a hitbox andar
+	hitbox.hit_particle = attack_particle
 	usuario.get_parent().add_child(hitbox)
 	var offset: float = min(distancia, attack_range)
 	hitbox.global_position = usuario.global_position + direction
@@ -31,9 +32,9 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 		hitbox.knockback_force = knockback_force
 		hitbox.knockback_duration = knockback_duration
 
-	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration) # trocar hitbox_duration por attack_range/speed pra bala ir até o final do range
+	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration)
 
-	#_spawn_attack_particle(usuario, alvo)
+
 
 	
 	
