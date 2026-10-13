@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://cjarlg8atu333"]
 
-[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_x1rox"]
+[ext_resource type="Resource" uid="uid://oawb8qqdy00u" path="res://resources/abilities/attack/projetil.tres" id="1_x1rox"]
 [ext_resource type="Texture2D" uid="uid://c8mso3l8u2xex" path="res://assets/sprites/creatures/fumiga.png" id="2_owpc8"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_a3se6"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_yw6ta"]

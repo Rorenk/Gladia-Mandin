@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="RangedBaseAttack" format=3 uid="uid://oawb8qqdy00u"]
+
+[ext_resource type="Script" uid="uid://cm7b8hknvil8" path="res://scripts/abilities/attacks/ranged_base_attack.gd" id="1_pba5g"]
+[ext_resource type="Texture2D" uid="uid://b0o22ekldfsbj" path="res://assets/sprites/hud/lifebar.png" id="2_t7pkp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ibkhc"]
+
+[resource]
+script = ExtResource("1_pba5g")
+damage = 10
+attack_range = 250.0
+knockback_force = 1.0
+knockback_duration = 1.0
+speed = 50
+hitbox_shape = SubResource("CircleShape2D_ibkhc")
+skill_name = "projetil"
+cooldown = 2.0
+skill_description = "atira"
+skill_icon = ExtResource("2_t7pkp")
+hitbox_duration = 1.0
+metadata/_custom_type_script = "uid://cm7b8hknvil8"

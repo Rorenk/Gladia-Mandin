@@ -7,6 +7,8 @@ var already_hit: Array = []
 var knockback_direction := Vector2.ZERO
 var knockback_force := 0.0
 var knockback_duration := 0.0
+var velocity := Vector2.ZERO
+var destroy_on_hit := true
 
 func hitbox_config(shape: Shape2D, dano: int, duration: float) -> void:
 	$AttackHitboxCollision.shape = shape
@@ -21,3 +23,8 @@ func _on_body_entered(body: Node) -> void:
 		body.creature_dados.receber_dano(damage)
 		if knockback_force > 0:
 			body.apply_knockback(knockback_direction * knockback_force, knockback_duration)
+		if destroy_on_hit == true:
+			queue_free()
+
+func _process(delta):
+	global_position += velocity * delta
