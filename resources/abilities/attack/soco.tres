@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="MeleeBaseAttack" format=3 uid="uid://dive66d8lf1on"]
 
+[ext_resource type="PackedScene" uid="uid://jgabp6ks42m6" path="res://scenes/particle_scenes/explosao_2.tscn" id="1_uwe27"]
 [ext_resource type="Script" uid="uid://dgcku7hl1wfxi" path="res://scripts/abilities/attacks/melee_base_attack.gd" id="1_ytex0"]
 [ext_resource type="Texture2D" uid="uid://b5i776hnv57al" path="res://icon.svg" id="2_dxjfd"]
-
-[sub_resource type="PackedScene" id="PackedScene_ytex0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxjfd"]
 
 [resource]
 script = ExtResource("1_ytex0")
 damage = 10
+attack_range = 100.0
 knockback_force = 1000.0
 knockback_duration = 0.15
 hitbox_shape = SubResource("CircleShape2D_dxjfd")
@@ -18,4 +18,4 @@ cooldown = 3.0
 has_knockback = true
 skill_description = "teste"
 skill_icon = ExtResource("2_dxjfd")
-attack_particle = SubResource("PackedScene_ytex0")
+attack_particle = ExtResource("1_uwe27")
