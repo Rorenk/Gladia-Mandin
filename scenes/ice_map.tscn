@@ -1,10 +1,15 @@
 [gd_scene format=4 uid="uid://c3b2y1p82nqry"]
 
-[ext_resource type="PackedScene" uid="uid://bdrakfc7hh5kf" path="res://scenes/creature_battle_template.tscn" id="1_orle4"]
+[ext_resource type="Script" uid="uid://i5m8a73uwne1" path="res://scripts/scenes/mapa_base.gd" id="1_5ot0j"]
 [ext_resource type="Texture2D" uid="uid://cwgc8xxyncgtw" path="res://assets/sprites/tilesets/snowbattletilest.png" id="2_sd5jd"]
 [ext_resource type="Texture2D" uid="uid://cnw4hoyk3xfe4" path="res://assets/sprites/tilesets/icetiles.png" id="3_kmf07"]
 [ext_resource type="Texture2D" uid="uid://bmxavvtkf1iv2" path="res://assets/sprites/tilesets/winter sprites.png" id="4_gkns5"]
 [ext_resource type="Texture2D" uid="uid://bwmqqrgdwi0sj" path="res://assets/sprites/effects/snomwflakes.png" id="5_32bpo"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_32bpo"]
+vertices = PackedVector2Array(614.96875, 335.0078, 27.9375, 335.97656, 26.0625, 21, 614.03125, 21)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(16, 11, 624, 11, 625, 345, 625, 345, 18, 346)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmf07"]
 texture = ExtResource("2_sd5jd")
@@ -694,12 +699,8 @@ anim_speed_max = 16.0
 anim_offset_max = 1.0
 
 [node name="IceMapNavegation" type="NavigationRegion2D" unique_id=1729185821]
-
-[node name="CreaturePlayerUm" parent="." unique_id=2000662877 instance=ExtResource("1_orle4")]
-position = Vector2(550, 277)
-
-[node name="CreatureCpuUm" parent="." unique_id=347323826 instance=ExtResource("1_orle4")]
-position = Vector2(82, 65)
+navigation_polygon = SubResource("NavigationPolygon_32bpo")
+script = ExtResource("1_5ot0j")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=2098521889]
 tile_set = SubResource("TileSet_30odb")
@@ -720,3 +721,9 @@ position = Vector2(320, 174)
 amount = 200
 texture = ExtResource("5_32bpo")
 process_material = SubResource("ParticleProcessMaterial_7o0u8")
+
+[node name="SpawnPlayer" type="Marker2D" parent="." unique_id=1968413964]
+position = Vector2(513, 263)
+
+[node name="SpawnCpu" type="Marker2D" parent="." unique_id=978054749]
+position = Vector2(197, 141)
