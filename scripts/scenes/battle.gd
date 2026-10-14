@@ -8,8 +8,8 @@ const FUMIGA_INDICE := 0
 const time_player : int = 2
 const time_cpu : int = 3
 const MAPAS := {
-	"floresta": preload("res://scenes/forest_map.tscn"),
-	#"gelo": preload("res://scenes/ice_map.tscn"),
+	#"floresta": preload("res://scenes/forest_map.tscn"),
+	"gelo": preload("res://scenes/ice_map.tscn"),
 }
 
 func _ready() -> void:
