@@ -9,7 +9,7 @@ const time_player : int = 2
 const time_cpu : int = 3
 const MAPAS := {
 	"floresta": preload("res://scenes/forest_map.tscn"),
-	"gelo": preload("res://scenes/ice_map.tscn"),
+	#"gelo": preload("res://scenes/ice_map.tscn"),
 }
 
 func _ready() -> void:
