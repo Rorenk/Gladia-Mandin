@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://dma278pkccl8k"]
 
-[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_oqaog"]
-[ext_resource type="Texture2D" uid="uid://cltkou5b8srpb" path="res://assets/sprites/creatures/boobmon.png" id="1_phwja"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_roy61"]
-[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_roy61"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_x2ac7"]
+[ext_resource type="Texture2D" uid="uid://cltkou5b8srpb" path="res://assets/sprites/creatures/boobmon.png" id="2_le4xt"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_n8ylc"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_f8jfh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phwja"]
-atlas = ExtResource("1_phwja")
+atlas = ExtResource("2_le4xt")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_roy61"]
-atlas = ExtResource("1_phwja")
+atlas = ExtResource("2_le4xt")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oqaog"]
@@ -28,9 +28,9 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("2_roy61")
-basic_attack = ExtResource("1_oqaog")
-special_skill = ExtResource("3_roy61")
+script = ExtResource("3_n8ylc")
+basic_attack = ExtResource("1_x2ac7")
+special_skill = ExtResource("4_f8jfh")
 creature_sprite_sheet = SubResource("SpriteFrames_oqaog")
 creature_name = "Boobmon"
 creature_max_hp = 100

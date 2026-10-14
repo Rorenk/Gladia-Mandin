@@ -11,7 +11,6 @@ script = ExtResource("1_th188")
 [node name="CreaturePlayerUm" parent="." unique_id=2000662877 instance=ExtResource("3_p1qf1")]
 position = Vector2(609, 345)
 scale = Vector2(0.99999994, 0.99999994)
-hop_velocidade = 100.0
 
 [node name="CreatureCpuUm" parent="." unique_id=1567605967 instance=ExtResource("3_p1qf1")]
 position = Vector2(44, 25)

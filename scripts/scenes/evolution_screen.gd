@@ -1,13 +1,15 @@
 extends Node2D
 
-
 @export var criatura_pre: CreatureResource
 @export var criatura_pos: CreatureResource
 
 @onready var effect: EvolutionEffect = $EvolutionEffect
+@onready var texto: Label = $TextoEvolucao
+@export var tempo_por_letra := 0.17
 
 func _ready() -> void:
-	await get_tree().create_timer(1.0).timeout
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	_escrever(texto, "%s está mudando..." % criatura_pre.creature_name)
 	evoluir(criatura_pre.creature_sprite_sheet, criatura_pos.creature_sprite_sheet)
 
 func evoluir(pre: SpriteFrames, post: SpriteFrames) -> void:
@@ -18,16 +20,21 @@ func evoluir(pre: SpriteFrames, post: SpriteFrames) -> void:
 
 	var centro: Vector2 = ($PreEvolutionSprite2D.global_position + $PosEvolutionSprite2D.global_position) / 2.0
 	var pixel_size: float = $PosEvolutionSprite2D.scale.x
-
 	effect.play_evolution(
 		pre, post,
 		effect.to_local($PreEvolutionSprite2D.global_position),
 		effect.to_local($PosEvolutionSprite2D.global_position),
 		effect.to_local(centro),
 		pixel_size
-	)
+	)	
 	await effect.evolution_finished
-
 
 	$PosEvolutionSprite2D.show()
 	$PosEvolutionSprite2D.play("idle")
+
+
+func _escrever(label: Label, texto_novo: String) -> void:
+	label.text = texto_novo
+	label.visible_ratio = 0.0
+	var duracao := texto_novo.length() * tempo_por_letra
+	create_tween().tween_property(label, "visible_ratio", 1.0, duracao)

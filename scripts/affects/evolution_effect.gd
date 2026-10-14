@@ -47,9 +47,10 @@ func play_evolution(pre_evolution_sprite: SpriteFrames, post_evolution_sprite: S
 
 	for i in total:
 		var rank := float(i) / float(total)
-		var pre_index := int(rank * extracted_pre.size())
-		var post_index := int(rank * extracted_post.size())
-
+		@warning_ignore("integer_division")
+		var pre_index := i * extracted_pre.size() / total
+		@warning_ignore("integer_division")
+		var post_index := i * extracted_post.size() / total
 		var leave := rank * leave_time + randf() * 0.1
 		var build := maxf(build_start + rank * build_time, leave + flight_time)
 		total_time = maxf(total_time, build + flight_time)
@@ -66,6 +67,7 @@ func play_evolution(pre_evolution_sprite: SpriteFrames, post_evolution_sprite: S
 			"leave": leave,
 			"build": build,
 		})
+	await get_tree().create_timer(1.0).timeout
 
 	_time = 0.0
 	var tween := create_tween()
@@ -75,6 +77,7 @@ func play_evolution(pre_evolution_sprite: SpriteFrames, post_evolution_sprite: S
 		queue_redraw()
 		evolution_finished.emit()
 	)
+
 
 func _extract(sprite: SpriteFrames, sprite_location: Vector2) -> Array:
 	var animation: StringName = sprite.get_animation_names()[0]
