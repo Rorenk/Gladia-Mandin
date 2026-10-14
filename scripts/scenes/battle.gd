@@ -2,9 +2,9 @@ extends Node2D
 
 const FONTE_ANUNCIO: Font = null
 const SHEET_FUMIGA: Texture2D = preload("res://assets/sprites/creatures/fumiga.png")	
-const FUMIGA_LARGURA := 64   # largura de UM frame, em pixels
-const FUMIGA_ALTURA := 64    # altura de UM frame, em pixels
-const FUMIGA_INDICE := 0     # qual frame usar (começa em 0)
+const FUMIGA_LARGURA := 64
+const FUMIGA_ALTURA := 64
+const FUMIGA_INDICE := 0
 const time_player : int = 2
 const time_cpu : int = 3
 const MAPAS := {
@@ -23,7 +23,7 @@ func _ready() -> void:
 	$CreatureCpuUm.global_position = mapa.spawn_cpu.global_position
 
 	$CreaturePlayerUm._carregar_creature_data(GameState.creature_escolhida.duplicate(true))
-	$CreatureCpuUm._carregar_creature_data(GameState.creature_escolhida.duplicate(true))
+	$CreatureCpuUm._carregar_creature_data(_sortear_creature_cpu().duplicate(true))
 	$CreaturePlayerUm.alvo = $CreatureCpuUm
 	$CreatureCpuUm.alvo = $CreaturePlayerUm
 	$CreaturePlayerUm.definir_time(time_player, [time_cpu])
@@ -41,11 +41,13 @@ func _ready() -> void:
 
 func _intro(mapa: MapaBase, anuncio: AnuncioCreature) -> void:
 	var cam: Camera2D = $Camera2D
-	var player: Node2D = $CreaturePlayerUm
-	var cpu: Node2D = $CreatureCpuUm
+	var player: CreatureBattleTemplate = $CreaturePlayerUm
+	var cpu: CreatureBattleTemplate = $CreatureCpuUm
 	var centro: Vector2 = mapa.limites.get_center()
-	var dados: CreatureResource = GameState.creature_escolhida
+	var dados: CreatureResource = player.creature_dados
+	var dados_cpu: CreatureResource = cpu.creature_dados
 	var textura: Texture2D = _textura_creature(dados)
+	var textura_cpu: Texture2D = _textura_creature(dados_cpu)
 
 	for c in [player, cpu]:
 		c.visible = false
@@ -64,7 +66,7 @@ func _intro(mapa: MapaBase, anuncio: AnuncioCreature) -> void:
 
 	await cam.focar(cpu.global_position, zoom_foco, 0.9)
 	await _spawnar(cpu)
-	anuncio.mostrar(dados.creature_name, textura, false)
+	anuncio.mostrar(dados_cpu.creature_name, textura_cpu, false)
 	await get_tree().create_timer(1.4).timeout
 
 	await cam.focar(centro, cam.zoom_min, 0.9)
@@ -107,3 +109,21 @@ func _frame_do_sheet(sheet: Texture2D, largura: int, altura: int, indice: int) -
 		altura
 	)
 	return atlas
+
+func _sortear_creature_cpu() -> CreatureResource:
+	var escolhida: CreatureResource = GameState.creature_escolhida
+	var candidatas: Array[CreatureResource] = []
+
+	for arquivo in DirAccess.get_files_at("res://resources/creatures/"):
+		if not arquivo.ends_with(".tres"):
+			continue
+		var c: CreatureResource = load("res://resources/creatures/" + arquivo)
+		if c.creature_name == escolhida.creature_name:
+			continue
+		if c.creature_form != escolhida.creature_form:
+			continue
+		candidatas.append(c)
+
+	if candidatas.is_empty():
+		return escolhida
+	return candidatas.pick_random()

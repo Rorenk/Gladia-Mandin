@@ -54,6 +54,6 @@ basic_attack = ExtResource("1_ujrsy")
 special_skill = ExtResource("3_ox4px")
 creature_sprite_sheet = SubResource("SpriteFrames_vwr3l")
 creature_name = "criativomon"
-creature_speed = 20
+creature_speed = 100
 creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"

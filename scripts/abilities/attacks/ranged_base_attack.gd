@@ -9,10 +9,10 @@ class_name RangedBaseAttack
 
 const HITBOX_SCENE = preload("res://scenes/attack_hitbox.tscn")
 
-func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
+func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> bool:
 	var distancia := usuario.global_position.distance_to(alvo.global_position)
 	if distancia > attack_range:
-		return
+		return false
 		
 	print("Ataque usado: ", skill_name)
 
@@ -21,7 +21,6 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 	var hitbox = HITBOX_SCENE.instantiate() #criar a função process pra fazer a hitbox andar
 	hitbox.hit_particle = attack_particle
 	usuario.get_parent().add_child(hitbox)
-	var offset: float = min(distancia, attack_range)
 	hitbox.global_position = usuario.global_position + direction
 	hitbox.velocity = direction * speed 
 	hitbox.collision_layer = 0
@@ -33,7 +32,7 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 		hitbox.knockback_duration = knockback_duration
 
 	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration)
-
+	return true
 
 
 	

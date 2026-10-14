@@ -8,10 +8,10 @@ class_name MeleeBaseAttack
 
 const HITBOX_SCENE = preload("res://scenes/attack_hitbox.tscn")
 
-func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> void:
+func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> bool:
 	var distancia := usuario.global_position.distance_to(alvo.global_position)
 	if distancia > attack_range:
-		return
+		return false
 		
 	print("Ataque usado: ", skill_name)
 
@@ -31,3 +31,4 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> vo
 		hitbox.knockback_duration = knockback_duration
 
 	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration)
+	return true
