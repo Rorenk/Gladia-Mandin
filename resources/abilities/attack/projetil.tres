@@ -19,5 +19,5 @@ cooldown = 2.0
 skill_description = "atira"
 skill_icon = ExtResource("2_t7pkp")
 attack_particle = ExtResource("1_t7pkp")
-hitbox_duration = 1.0
+hitbox_duration = 5.0
 metadata/_custom_type_script = "uid://cm7b8hknvil8"
