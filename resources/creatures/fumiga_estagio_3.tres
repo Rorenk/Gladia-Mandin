@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://c3nep64qoxivf"]
+
+[ext_resource type="Resource" uid="uid://oawb8qqdy00u" path="res://resources/abilities/attack/projetil.tres" id="1_rax4y"]
+[ext_resource type="Texture2D" uid="uid://bistelae2aeia" path="res://assets/sprites/creatures/fumiga_estagio_3.png" id="2_an375"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_2fuab"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_opm3g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc4nj"]
+atlas = ExtResource("2_an375")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t533"]
+atlas = ExtResource("2_an375")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y0cen"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc4nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t533")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("3_2fuab")
+basic_attack = ExtResource("1_rax4y")
+special_skill = ExtResource("4_opm3g")
+creature_sprite_sheet = SubResource("SpriteFrames_y0cen")
+creature_name = "fumiga_estagio_3"
+creature_max_hp = 250
+creature_attack = 30
+creature_defense = 30
+creature_special_attack = 30
+creature_special_defense = 30
+creature_speed = 60
+creature_luck = 40
+creature_form = 3
+metadata/_custom_type_script = "uid://cq26uefm0qhsr"
