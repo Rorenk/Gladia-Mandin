@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdt0g07u6e4i8"]
+
+[ext_resource type="Texture2D" uid="uid://0t1la2pdln41" path="res://assets/sprites/attack_sprites/raio.png" id="1_vporr"]
+
+[sub_resource type="Curve" id="Curve_jh6tl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Node2D" type="Node2D" unique_id=1316908009]
+
+[node name="raios" type="CPUParticles2D" parent="." unique_id=2135989571]
+emitting = false
+texture = ExtResource("1_vporr")
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 50.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_jh6tl")
