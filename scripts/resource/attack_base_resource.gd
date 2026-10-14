@@ -9,6 +9,7 @@ extends Resource
 @export var skill_icon: Texture2D
 @export var attack_particle: PackedScene
 @export var hitbox_duration: float = 0.15
+@export var attack_texture: Texture2D
 
 func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> bool:
 	return false

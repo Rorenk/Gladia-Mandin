@@ -162,7 +162,7 @@ func _trailer_trocar() -> void:
     for c in [player, cpu]:
         c.process_mode = Node.PROCESS_MODE_DISABLED
 
-    # Novo mapa
+    # Novo mapa 
     var opcoes := MAPAS.keys().filter(func(k): return MAPAS[k].resource_path != _mapa_atual.scene_file_path)
     if opcoes.is_empty():
         opcoes = MAPAS.keys()

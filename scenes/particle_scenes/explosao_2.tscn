@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://jgabp6ks42m6"]
 
-[ext_resource type="Texture2D" uid="uid://b5i776hnv57al" path="res://icon.svg" id="1_67jdv"]
-
 [sub_resource type="Curve" id="Curve_ejq7b"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -10,9 +8,11 @@ point_count = 2
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=334162049]
 emitting = false
-texture = ExtResource("1_67jdv")
 one_shot = true
+explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)
-scale_amount_max = 2.0
+initial_velocity_max = 49.72
+scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_ejq7b")
+color = Color(1, 0.627451, 0.03137255, 1)

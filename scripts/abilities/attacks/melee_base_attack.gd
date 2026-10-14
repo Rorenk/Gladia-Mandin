@@ -30,5 +30,5 @@ func atacar(usuario: CreatureBattleTemplate, alvo: CreatureBattleTemplate) -> bo
 		hitbox.knockback_force = knockback_force
 		hitbox.knockback_duration = knockback_duration
 
-	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration)
+	hitbox.hitbox_config(hitbox_shape, damage, hitbox_duration, attack_texture)
 	return true

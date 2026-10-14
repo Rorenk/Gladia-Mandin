@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RingAttack" format=3 uid="uid://brmnofvbx1k72"]
+
+[ext_resource type="PackedScene" uid="uid://duvspvmosnvck" path="res://scenes/particle_scenes/explosao_aneis.tscn" id="1_k3xcj"]
+[ext_resource type="Texture2D" uid="uid://3po67idenvmu" path="res://assets/sprites/attack_sprites/ring_attack.png" id="2_bdrxj"]
+[ext_resource type="Script" uid="uid://c8xyjabmjh6we" path="res://scripts/abilities/attacks/ring_attack.gd" id="3_io35c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pffbo"]
+
+[resource]
+script = ExtResource("3_io35c")
+damage = 60
+attack_range = 250.0
+knockback_force = 1.0
+knockback_duration = 1.0
+hitbox_shape = SubResource("CircleShape2D_pffbo")
+skill_name = "ring attack"
+cooldown = 5.0
+skill_description = "atira aneis"
+skill_icon = ExtResource("2_bdrxj")
+attack_particle = ExtResource("1_k3xcj")
+hitbox_duration = 3.0
+attack_texture = ExtResource("2_bdrxj")
+metadata/_custom_type_script = "uid://c8xyjabmjh6we"

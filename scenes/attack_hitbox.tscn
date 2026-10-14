@@ -6,3 +6,5 @@
 script = ExtResource("1_boghs")
 
 [node name="AttackHitboxCollision" type="CollisionShape2D" parent="." unique_id=1113343670]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1360889830]

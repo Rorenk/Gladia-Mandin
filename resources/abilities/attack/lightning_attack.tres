@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="RingAttack" format=3 uid="uid://womjr1kvo0wp"]
+
+[ext_resource type="PackedScene" uid="uid://bdt0g07u6e4i8" path="res://scenes/particle_scenes/explosao_raios.tscn" id="1_8co6d"]
+[ext_resource type="Texture2D" uid="uid://0t1la2pdln41" path="res://assets/sprites/attack_sprites/raio.png" id="2_svq8f"]
+[ext_resource type="Script" uid="uid://c8xyjabmjh6we" path="res://scripts/abilities/attacks/ring_attack.gd" id="3_pjw1e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmf7v"]
+
+[resource]
+script = ExtResource("3_pjw1e")
+damage = 40
+attack_range = 100.0
+hitbox_shape = SubResource("CircleShape2D_cmf7v")
+skill_name = "lightning_attack"
+cooldown = 4.0
+skill_description = "atira raios"
+skill_icon = ExtResource("2_svq8f")
+attack_particle = ExtResource("1_8co6d")
+hitbox_duration = 3.0
+attack_texture = ExtResource("2_svq8f")
+metadata/_custom_type_script = "uid://c8xyjabmjh6we"

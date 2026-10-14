@@ -11,9 +11,14 @@ var velocity := Vector2.ZERO
 var destroy_on_hit := true
 #var particula_de_ataque = preload("res://scenes/particula_explosao.tscn")
 var hit_particle : PackedScene
+var attack_texture: Texture2D
 
-func hitbox_config(shape: Shape2D, dano: int, duration: float) -> void:
+func hitbox_config(shape: Shape2D, dano: int, duration: float, attack_texture: Texture2D) -> void:
 	$AttackHitboxCollision.shape = shape
+	if attack_texture != null:
+		$Sprite2D.texture = attack_texture
+		if velocity != Vector2.ZERO:
+			$Sprite2D.rotation = velocity.angle()
 	damage = dano
 	body_entered.connect(_on_body_entered)
 	await get_tree().create_timer(duration).timeout
@@ -37,6 +42,6 @@ func _spawn_attack_particle(posicao: Vector2):
 	var efeito: Node = hit_particle.instantiate()
 	get_parent().add_child(efeito)
 	efeito.global_position = posicao
-	var particulas: CPUParticles2D = efeito.get_node("CPUParticles2D")
+	var particulas: CPUParticles2D = efeito.get_child(0)
 	particulas.finished.connect(efeito.queue_free)
 	particulas.emitting = true

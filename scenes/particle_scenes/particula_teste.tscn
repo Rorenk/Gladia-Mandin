@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpsbas2pe7mrx"]
 
-[ext_resource type="Texture2D" uid="uid://b0o22ekldfsbj" path="res://assets/sprites/hud/lifebar.png" id="1_t8poa"]
+[ext_resource type="Texture2D" uid="uid://3po67idenvmu" path="res://assets/sprites/attack_sprites/ring_attack.png" id="1_0phk8"]
 
 [sub_resource type="Curve" id="Curve_ejq7b"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -11,8 +11,9 @@ point_count = 2
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=227574171]
 emitting = false
 amount = 20
-texture = ExtResource("1_t8poa")
+texture = ExtResource("1_0phk8")
 lifetime = 0.5
+one_shot = true
 explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)
@@ -20,3 +21,4 @@ initial_velocity_min = 50.0
 initial_velocity_max = 200.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_ejq7b")
+color = Color(0, 1, 1, 1)
