@@ -1,25 +1,47 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://ywyfxk3d5p0"]
 
-[ext_resource type="Texture2D" uid="uid://chr4i4poyxd6q" path="res://assets/sprites/creatures/Sprite-0002.png" id="1_b2cbg"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_ujrsy"]
+[ext_resource type="Texture2D" uid="uid://d3hvmb7tyhh4d" path="res://assets/sprites/creatures/anjoformaum.png" id="2_ujrsy"]
 [ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_w66et"]
 [ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_ox4px"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pg1m6"]
-atlas = ExtResource("1_b2cbg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiawy"]
+atlas = ExtResource("2_ujrsy")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uo0vr"]
-atlas = ExtResource("1_b2cbg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaxat"]
+atlas = ExtResource("2_ujrsy")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_u11tv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_em1tm"]
+atlas = ExtResource("2_ujrsy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmfm1"]
+atlas = ExtResource("2_ujrsy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7hkq"]
+atlas = ExtResource("2_ujrsy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vwr3l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pg1m6")
+"texture": SubResource("AtlasTexture_fiawy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uo0vr")
+"texture": SubResource("AtlasTexture_qaxat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em1tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmfm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7hkq")
 }],
 "loop": 1,
 "name": &"default",
@@ -28,9 +50,10 @@ animations = [{
 
 [resource]
 script = ExtResource("2_w66et")
+basic_attack = ExtResource("1_ujrsy")
 special_skill = ExtResource("3_ox4px")
-creature_sprite_sheet = SubResource("SpriteFrames_u11tv")
+creature_sprite_sheet = SubResource("SpriteFrames_vwr3l")
 creature_name = "criativomon"
 creature_speed = 20
-creature_form = 2
+creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"
