@@ -4,6 +4,7 @@ var test :int = 1
 
 func _ready():
 	MusicController.play_music()
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _on_jogar_pressed() -> void:
 	GameState.treinamento = false
