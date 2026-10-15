@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://btjvso7qirv4t"]
+
+[ext_resource type="Script" uid="uid://dxxjr26oukq07" path="res://scripts/boing_drop.gd" id="1_a1jmv"]
+[ext_resource type="Texture2D" uid="uid://dlsadqy018w17" path="res://assets/sprites/creatures/anjotruemon.png" id="2_7apss"]
+[ext_resource type="Texture2D" uid="uid://cmna0v0iyg68k" path="res://assets/sprites/hud/gladia_mandim_logo.png" id="2_ieibq"]
+[ext_resource type="Texture2D" uid="uid://c8mso3l8u2xex" path="res://assets/sprites/creatures/fumiga.png" id="3_ieibq"]
+[ext_resource type="Texture2D" uid="uid://cy5p3hbrf56j3" path="res://assets/sprites/creatures/fumiga_estagio_2.png" id="4_c3i80"]
+[ext_resource type="Texture2D" uid="uid://d3hvmb7tyhh4d" path="res://assets/sprites/creatures/anjoformaum.png" id="5_m0qm0"]
+
+[node name="BoingDrop" type="Node2D" unique_id=182300608]
+script = ExtResource("1_a1jmv")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1968216493]
+texture_filter = 2
+position = Vector2(320, 180)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("2_ieibq")
+
+[node name="Anjo" type="Sprite2D" parent="." unique_id=887993586]
+position = Vector2(128, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("2_7apss")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Fumiga" type="Sprite2D" parent="." unique_id=1284944371]
+position = Vector2(256, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("3_ieibq")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Cebolita" type="Sprite2D" parent="." unique_id=1202012999]
+position = Vector2(384, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("4_c3i80")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="MaisCriativomon" type="Sprite2D" parent="." unique_id=445056119]
+position = Vector2(512, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("5_m0qm0")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
