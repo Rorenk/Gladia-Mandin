@@ -1,28 +1,28 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://cjarlg8atu333"]
 
-[ext_resource type="Resource" uid="uid://brmnofvbx1k72" path="res://resources/abilities/attack/ring_attack.tres" id="1_x1rox"]
-[ext_resource type="Texture2D" uid="uid://c8mso3l8u2xex" path="res://assets/sprites/creatures/fumiga.png" id="2_owpc8"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_a3se6"]
-[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_yw6ta"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_47fcv"]
+[ext_resource type="Texture2D" uid="uid://c8mso3l8u2xex" path="res://assets/sprites/creatures/fumiga.png" id="2_02k1o"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_w4s0l"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_acqwt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpxht"]
-atlas = ExtResource("2_owpc8")
+atlas = ExtResource("2_02k1o")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1rox"]
-atlas = ExtResource("2_owpc8")
+atlas = ExtResource("2_02k1o")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_owpc8"]
-atlas = ExtResource("2_owpc8")
+atlas = ExtResource("2_02k1o")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3se6"]
-atlas = ExtResource("2_owpc8")
+atlas = ExtResource("2_02k1o")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw6ta"]
-atlas = ExtResource("2_owpc8")
+atlas = ExtResource("2_02k1o")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sr5u"]
@@ -49,11 +49,11 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("3_a3se6")
-basic_attack = ExtResource("1_x1rox")
-special_skill = ExtResource("4_yw6ta")
+script = ExtResource("3_w4s0l")
+basic_attack = ExtResource("1_47fcv")
+special_skill = ExtResource("4_acqwt")
 creature_sprite_sheet = SubResource("SpriteFrames_7sr5u")
-creature_name = "fumiga"
+creature_name = "Fumiga"
 creature_max_hp = 10
 creature_attack = 1
 creature_defense = 1

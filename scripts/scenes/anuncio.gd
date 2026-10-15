@@ -102,7 +102,7 @@ func mostrar_ready_fight(textura: Texture2D) -> void:
 	label.add_theme_constant_override("outline_size", 8)
 	label.pivot_offset = label.size / 2.0
 	label.scale = Vector2.ZERO
-	label.text = "READY?"
+	label.text = "PREPARAR"
 	raiz.add_child(label)
 
 	# sprite entra
@@ -116,7 +116,7 @@ func mostrar_ready_fight(textura: Texture2D) -> void:
 	await get_tree().create_timer(0.8).timeout
 
 	# FIGHT! aparece (maior e amarelo)
-	label.text = "FIGHT!"
+	label.text = "LUTAR"
 	label.add_theme_color_override("font_color", cor_borda)
 	label.scale = Vector2(1.6, 1.6)
 	var t3 := create_tween()

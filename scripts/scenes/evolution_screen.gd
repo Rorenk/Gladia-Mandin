@@ -6,10 +6,14 @@ extends Node2D
 @onready var effect: EvolutionEffect = $EvolutionEffect
 @onready var texto: Label = $TextoEvolucao
 @export var tempo_por_letra := 0.17
+const FONTE_ANUNCIO: Font = preload("res://assets/sprites/effects/fonteff.png")
 
+@export var tamanho_fonte := 24
 func _ready() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	_escrever(texto, "%s está mudando..." % criatura_pre.creature_name)
+	texto.add_theme_font_override("font", FONTE_ANUNCIO)
+	texto.add_theme_font_size_override("font_size", tamanho_fonte)
+	_escrever(texto, ("%s esta mudando..." % criatura_pre.creature_name).to_upper())
 	evoluir(criatura_pre.creature_sprite_sheet, criatura_pos.creature_sprite_sheet)
 
 func evoluir(pre: SpriteFrames, post: SpriteFrames) -> void:

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://765yrwd2ykjx" path="res://scripts/scenes/evolution_screen.gd" id="1_si12h"]
 [ext_resource type="Script" uid="uid://bagn4t83tpxsp" path="res://scripts/affects/evolution_effect.gd" id="2_1xh4j"]
-[ext_resource type="Resource" uid="uid://c3nep64qoxivf" path="res://resources/creatures/fumiga_estagio_3.tres" id="3_8i8vs"]
-[ext_resource type="Resource" uid="uid://b7asfg5neuyil" path="res://resources/creatures/fumiga_estagio_2.tres" id="3_tqs4r"]
+[ext_resource type="Resource" uid="uid://c3nep64qoxivf" path="res://resources/creatures/Cebolita.tres" id="3_8i8vs"]
+[ext_resource type="Resource" uid="uid://b7asfg5neuyil" path="res://resources/creatures/Micanga.tres" id="3_tqs4r"]
 [ext_resource type="Shader" uid="uid://b0sbmth18nswe" path="res://scripts/ui/evolution_screen.gdshader" id="4_8i8vs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_otrat"]

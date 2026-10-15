@@ -1,7 +1,7 @@
 extends Node2D
 
 const MODO_TRAILER := true   # false = desliga tudo
-const FONTE_ANUNCIO: Font = null
+const FONTE_ANUNCIO: Font = preload("res://assets/sprites/effects/fonteff.png")
 const SHEET_FUMIGA: Texture2D = preload("res://assets/sprites/creatures/fumiga.png")    
 const FUMIGA_LARGURA := 64
 const FUMIGA_ALTURA := 64
@@ -9,210 +9,143 @@ const FUMIGA_INDICE := 0
 const time_player : int = 2
 const time_cpu : int = 3
 const MAPAS := {
-    "floresta": preload("res://scenes/forest_map.tscn"),
-    "gelo": preload("res://scenes/ice_map.tscn"),
+	"floresta": preload("res://scenes/forest_map.tscn"),
+	"gelo": preload("res://scenes/ice_map.tscn"),
 }
+# Altere o caminho abaixo para o caminho correto da sua cena de evolução:
+const CENA_EVOLUCAO := preload("res://scenes/evolution_screen.tscn")
 
 func _ready() -> void:
-    var chave: String = MAPAS.keys().pick_random()
-    var mapa: MapaBase = MAPAS[chave].instantiate()
-    add_child(mapa)
-    move_child(mapa, 0)
-    _mapa_atual = mapa   # TRAILER
-    await get_tree().physics_frame
+	var chave: String = MAPAS.keys().pick_random()
+	var mapa: MapaBase = MAPAS[chave].instantiate()
+	add_child(mapa)
+	move_child(mapa, 0)
+	await get_tree().physics_frame
 
-    $CreaturePlayerUm.global_position = mapa.spawn_player.global_position
-    $CreatureCpuUm.global_position = mapa.spawn_cpu.global_position
+	$CreaturePlayerUm.global_position = mapa.spawn_player.global_position
+	$CreatureCpuUm.global_position = mapa.spawn_cpu.global_position
 
-    $CreaturePlayerUm._carregar_creature_data(GameState.creature_escolhida.duplicate(true))
-    $CreatureCpuUm._carregar_creature_data(_sortear_creature_cpu().duplicate(true))
-    $CreaturePlayerUm.alvo = $CreatureCpuUm
-    $CreatureCpuUm.alvo = $CreaturePlayerUm
-    $CreaturePlayerUm.definir_time(time_player, [time_cpu])
-    $CreatureCpuUm.definir_time(time_cpu, [time_player])
+	$CreaturePlayerUm._carregar_creature_data(GameState.creature_escolhida.duplicate(true))
+	$CreatureCpuUm._carregar_creature_data(_sortear_creature_cpu().duplicate(true))
+	$CreaturePlayerUm.alvo = $CreatureCpuUm
+	$CreatureCpuUm.alvo = $CreaturePlayerUm
+	$CreaturePlayerUm.definir_time(time_player, [time_cpu])
+	$CreatureCpuUm.definir_time(time_cpu, [time_player])
 
-    $Camera2D.definir_mapa(mapa.limites)
-    $Camera2D.definir_alvos([$CreaturePlayerUm, $CreatureCpuUm])
+	$Camera2D.definir_mapa(mapa.limites)
+	$Camera2D.definir_alvos([$CreaturePlayerUm, $CreatureCpuUm])
 
-    var anuncio := AnuncioCreature.new()
-    anuncio.fonte = FONTE_ANUNCIO
-    anuncio.y_jogador = 0.7
-    anuncio.y_inimigo = 0.1
-    add_child(anuncio)  
-    await _intro(mapa, anuncio)
-    if MODO_TRAILER: _trailer_ligar()   # TRAILER
+	var anuncio := AnuncioCreature.new()
+	anuncio.fonte = FONTE_ANUNCIO
+	anuncio.y_jogador = 0.7
+	anuncio.y_inimigo = 0.1
+	add_child(anuncio)  
+	await _intro(mapa, anuncio)
+	if MODO_TRAILER: _trailer_ligar()   # TRAILER
 
 func _intro(mapa: MapaBase, anuncio: AnuncioCreature) -> void:
-    var cam: Camera2D = $Camera2D
-    var player: CreatureBattleTemplate = $CreaturePlayerUm
-    var cpu: CreatureBattleTemplate = $CreatureCpuUm
-    var centro: Vector2 = mapa.limites.get_center()
-    var dados: CreatureResource = player.creature_dados
-    var dados_cpu: CreatureResource = cpu.creature_dados
-    var textura: Texture2D = _textura_creature(dados)
-    var textura_cpu: Texture2D = _textura_creature(dados_cpu)
+	var cam: Camera2D = $Camera2D
+	var player: CreatureBattleTemplate = $CreaturePlayerUm
+	var cpu: CreatureBattleTemplate = $CreatureCpuUm
+	var centro: Vector2 = mapa.limites.get_center()
+	var dados: CreatureResource = player.creature_dados
+	var dados_cpu: CreatureResource = cpu.creature_dados
+	var textura: Texture2D = _textura_creature(dados)
+	var textura_cpu: Texture2D = _textura_creature(dados_cpu)
 
-    for c in [player, cpu]:
-        c.visible = false
-        c.process_mode = Node.PROCESS_MODE_DISABLED
+	for c in [player, cpu]:
+		c.visible = false
+		c.process_mode = Node.PROCESS_MODE_DISABLED
 
-    cam.modo_manual = true
-    cam.global_position = centro
-    cam.zoom = Vector2(cam.zoom_min, cam.zoom_min)
-    var zoom_foco: float = cam.zoom_min * 1.4
+	cam.modo_manual = true
+	cam.global_position = centro
+	cam.zoom = Vector2(cam.zoom_min, cam.zoom_min)
+	var zoom_foco: float = cam.zoom_min * 1.4
 
-    await get_tree().create_timer(0.6).timeout
-    await cam.focar(player.global_position, zoom_foco, 0.9)
-    await _spawnar(player)
-    anuncio.mostrar(dados.creature_name, textura, true)
-    await get_tree().create_timer(1.4).timeout
+	await get_tree().create_timer(0.6).timeout
+	await cam.focar(player.global_position, zoom_foco, 0.9)
+	await _spawnar(player)
+	anuncio.mostrar(dados.creature_name, textura, true)
 
-    await cam.focar(cpu.global_position, zoom_foco, 0.9)
-    await _spawnar(cpu)
-    anuncio.mostrar(dados_cpu.creature_name, textura_cpu, false)
-    await get_tree().create_timer(1.4).timeout
+	await cam.focar(cpu.global_position, zoom_foco, 0.9)
+	await _spawnar(cpu)
+	anuncio.mostrar(dados_cpu.creature_name, textura_cpu, false)
+	await get_tree().create_timer(1.4).timeout
 
-    await cam.focar(centro, cam.zoom_min, 0.9)
-    var sprite_fumiga := _frame_do_sheet(SHEET_FUMIGA, FUMIGA_LARGURA, FUMIGA_ALTURA, FUMIGA_INDICE)
-    await anuncio.mostrar_ready_fight(sprite_fumiga)
-    cam.liberar()
-    for c in [player, cpu]:
-        c.process_mode = Node.PROCESS_MODE_INHERIT
+	await cam.focar(centro, cam.zoom_min, 0.9)
+	var sprite_fumiga := _frame_do_sheet(SHEET_FUMIGA, FUMIGA_LARGURA, FUMIGA_ALTURA, FUMIGA_INDICE)
+	await anuncio.mostrar_ready_fight(sprite_fumiga)
+	cam.liberar()
+	for c in [player, cpu]:
+		c.process_mode = Node.PROCESS_MODE_INHERIT
 
 func _spawnar(c: Node2D) -> void:
-    var escala_original: Vector2 = c.scale
-    c.scale = Vector2.ZERO
-    c.visible = true
-    var t := create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-    t.tween_property(c, "scale", escala_original, 0.5)
-    await t.finished
+	var escala_original: Vector2 = c.scale
+	c.scale = Vector2.ZERO
+	c.visible = true
+	var t := create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(c, "scale", escala_original, 0.5)
+	await t.finished
 
 func _textura_creature(dados: CreatureResource) -> Texture2D:
-    var frames: SpriteFrames = dados.creature_sprite_sheet
-    if frames == null:
-        return null
-    var anim: StringName = &"idle"
-    if not frames.has_animation(anim):
-        var nomes := frames.get_animation_names()
-        if nomes.is_empty():
-            return null
-        anim = nomes[0]
-    return frames.get_frame_texture(anim, 0)
+	var frames: SpriteFrames = dados.creature_sprite_sheet
+	if frames == null:
+		return null
+	var anim: StringName = &"idle"
+	if not frames.has_animation(anim):
+		var nomes := frames.get_animation_names()
+		if nomes.is_empty():
+			return null
+		anim = nomes[0]
+	return frames.get_frame_texture(anim, 0)
 
 func _frame_do_sheet(sheet: Texture2D, largura: int, altura: int, indice: int) -> Texture2D:
-    if sheet == null:
-        return null
-    var colunas := maxi(1, sheet.get_width() / largura)
-    var atlas := AtlasTexture.new()
-    atlas.atlas = sheet
-    atlas.region = Rect2(
-        (indice % colunas) * largura,
-        floori(float(indice) / colunas) * altura,
-        largura,
-        altura
-    )
-    return atlas
+	if sheet == null:
+		return null
+	var colunas := maxi(1, sheet.get_width() / largura)
+	var atlas := AtlasTexture.new()
+	atlas.atlas = sheet
+	atlas.region = Rect2(
+		(indice % colunas) * largura,
+		floori(float(indice) / colunas) * altura,
+		largura,
+		altura
+	)
+	return atlas
 
 func _sortear_creature_cpu() -> CreatureResource:
-    var escolhida: CreatureResource = GameState.creature_escolhida
-    var candidatas: Array[CreatureResource] = []
+	var escolhida: CreatureResource = GameState.creature_escolhida
+	var candidatas: Array[CreatureResource] = []
 
-    for arquivo in DirAccess.get_files_at("res://resources/creatures/"):
-        if not arquivo.ends_with(".tres"):
-            continue
-        var c: CreatureResource = load("res://resources/creatures/" + arquivo)
-        if c.creature_name == escolhida.creature_name:
-            continue
-        if c.creature_form != escolhida.creature_form:
-            continue
-        candidatas.append(c)
+	for arquivo in DirAccess.get_files_at("res://resources/creatures/"):
+		if not arquivo.ends_with(".tres"):
+			continue
+		var c: CreatureResource = load("res://resources/creatures/" + arquivo)
+		if c.creature_name == escolhida.creature_name:
+			continue
+		if c.creature_form != escolhida.creature_form:
+			continue
+		candidatas.append(c)
 
-    if candidatas.is_empty():
-        return escolhida
-    return candidatas.pick_random()
+	if candidatas.is_empty():
+		return escolhida
+	return candidatas.pick_random()
 
 # ===================== TRAILER (apague este bloco para remover) =====================
-var _mapa_atual: MapaBase
 var _trocando := false
 
 func _trailer_ligar() -> void:
-    for c in [$CreaturePlayerUm, $CreatureCpuUm]:
-        if not c.creature_dados.hp_changed.is_connected(_trailer_on_hit):
-            c.creature_dados.hp_changed.connect(_trailer_on_hit)
+	for c in [$CreaturePlayerUm, $CreatureCpuUm]:
+		if not c.creature_dados.hp_changed.is_connected(_trailer_on_hit):
+			c.creature_dados.hp_changed.connect(_trailer_on_hit)
 
 func _trailer_on_hit() -> void:
-    if _trocando:
-        return
-    _trocando = true
-    await get_tree().create_timer(0.2).timeout   # Breve delay do golpe acertar antes do corte
-    await _trailer_trocar()
-    await get_tree().create_timer(0.8).timeout   # Pausa para dar ritmo antes de permitir nova troca
-    _trocando = false
+	if _trocando:
+		return
+	_trocando = true
+	await get_tree().create_timer(0.2).timeout   # Breve delay do golpe acertar antes do corte
+	_trailer_trocar()
 
 func _trailer_trocar() -> void:
-    var player: CreatureBattleTemplate = $CreaturePlayerUm
-    var cpu: CreatureBattleTemplate = $CreatureCpuUm
-    var cam: Camera2D = $Camera2D
-
-    # 1. Salva as posições atuais onde eles estavam antes da troca
-    var pos_player := player.global_position
-    var pos_cpu := cpu.global_position
-
-    # Pausa temporária enquanto reposiciona a cena
-    for c in [player, cpu]:
-        c.process_mode = Node.PROCESS_MODE_DISABLED
-
-    # Novo mapa 
-    var opcoes := MAPAS.keys().filter(func(k): return MAPAS[k].resource_path != _mapa_atual.scene_file_path)
-    if opcoes.is_empty():
-        opcoes = MAPAS.keys()
-    _mapa_atual.queue_free()
-    var mapa: MapaBase = MAPAS[opcoes.pick_random()].instantiate()
-    add_child(mapa)
-    move_child(mapa, 0)
-    _mapa_atual = mapa
-
-    # 2. Restaura as posições salvas no novo mapa
-    player.global_position = pos_player
-    cpu.global_position = pos_cpu
-
-    # Novos personagens
-    var dados_p := _trailer_sortear()
-    var dados_c := _trailer_sortear(dados_p)
-    player._carregar_creature_data(dados_p.duplicate(true))
-    cpu._carregar_creature_data(dados_c.duplicate(true))
-
-    for c in [player, cpu]:
-        c.is_in_knockback = false
-        c.velocity = Vector2.ZERO
-        c.scale = Vector2.ONE * c.escala_base
-        c.attack_manager.basic_attack_timer.stop()
-        c.attack_manager.skill_timer.stop()
-        c.visible = true
-
-    # Ajuste de Câmera
-    cam.definir_mapa(mapa.limites)
-    cam.global_position = (player.global_position + cpu.global_position) / 2.0
-
-    await get_tree().physics_frame
-
-    for c in [player, cpu]:
-        c.process_mode = Node.PROCESS_MODE_INHERIT
-
-    _trailer_ligar()
-	
-func _trailer_sortear(excluir: CreatureResource = null) -> CreatureResource:
-    var lista: Array[CreatureResource] = []
-    for arquivo in DirAccess.get_files_at("res://resources/creatures/"):
-        if not arquivo.ends_with(".tres"):
-            continue
-        var c: CreatureResource = load("res://resources/creatures/" + arquivo)
-        if c.basic_attack == null or c.special_skill == null:
-            continue
-        if excluir != null and c.creature_name == excluir.creature_name:
-            continue
-        lista.append(c)
-    if lista.is_empty():
-        return GameState.creature_escolhida
-    return lista.pick_random()
+	get_tree().change_scene_to_packed(CENA_EVOLUCAO)
 # =================== FIM DO TRAILER ===================

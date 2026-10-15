@@ -1,24 +1,24 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://djs87r2kqk4yi"]
 
-[ext_resource type="Resource" uid="uid://womjr1kvo0wp" path="res://resources/abilities/attack/lightning_attack.tres" id="1_pscaj"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_pscaj"]
-[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_1la7a"]
-[ext_resource type="Texture2D" uid="uid://dlsadqy018w17" path="res://assets/sprites/creatures/anjotruemon.png" id="3_phwh2"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_eu6fs"]
+[ext_resource type="Texture2D" uid="uid://dlsadqy018w17" path="res://assets/sprites/creatures/anjotruemon.png" id="2_kho1m"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_he665"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_1mti5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jep20"]
-atlas = ExtResource("3_phwh2")
+atlas = ExtResource("2_kho1m")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwd0y"]
-atlas = ExtResource("3_phwh2")
+atlas = ExtResource("2_kho1m")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_flhm5"]
-atlas = ExtResource("3_phwh2")
+atlas = ExtResource("2_kho1m")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ov8o"]
-atlas = ExtResource("3_phwh2")
+atlas = ExtResource("2_kho1m")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bl21q"]
@@ -42,11 +42,11 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("2_pscaj")
-basic_attack = ExtResource("1_pscaj")
-special_skill = ExtResource("3_1la7a")
+script = ExtResource("3_he665")
+basic_attack = ExtResource("1_eu6fs")
+special_skill = ExtResource("4_1mti5")
 creature_sprite_sheet = SubResource("SpriteFrames_bl21q")
-creature_name = "Anjico"
+creature_name = "Seraphin"
 creature_max_hp = 100
 creature_attack = 10
 creature_defense = 10

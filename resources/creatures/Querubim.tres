@@ -1,28 +1,28 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://ywyfxk3d5p0"]
 
-[ext_resource type="Resource" uid="uid://womjr1kvo0wp" path="res://resources/abilities/attack/lightning_attack.tres" id="1_ujrsy"]
-[ext_resource type="Texture2D" uid="uid://d3hvmb7tyhh4d" path="res://assets/sprites/creatures/anjoformaum.png" id="2_ujrsy"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="2_w66et"]
-[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="3_ox4px"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_y7hq6"]
+[ext_resource type="Texture2D" uid="uid://d3hvmb7tyhh4d" path="res://assets/sprites/creatures/anjoformaum.png" id="2_mre0p"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_8o1o4"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_40u7l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiawy"]
-atlas = ExtResource("2_ujrsy")
+atlas = ExtResource("2_mre0p")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qaxat"]
-atlas = ExtResource("2_ujrsy")
+atlas = ExtResource("2_mre0p")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_em1tm"]
-atlas = ExtResource("2_ujrsy")
+atlas = ExtResource("2_mre0p")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmfm1"]
-atlas = ExtResource("2_ujrsy")
+atlas = ExtResource("2_mre0p")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7hkq"]
-atlas = ExtResource("2_ujrsy")
+atlas = ExtResource("2_mre0p")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vwr3l"]
@@ -49,11 +49,11 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("2_w66et")
-basic_attack = ExtResource("1_ujrsy")
-special_skill = ExtResource("3_ox4px")
+script = ExtResource("3_8o1o4")
+basic_attack = ExtResource("1_y7hq6")
+special_skill = ExtResource("4_40u7l")
 creature_sprite_sheet = SubResource("SpriteFrames_vwr3l")
-creature_name = "criativomon"
+creature_name = "Querubim"
 creature_speed = 100
 creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"

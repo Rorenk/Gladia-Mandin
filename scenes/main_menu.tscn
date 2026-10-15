@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2y5rwquyt836"]
 
-[ext_resource type="Script" uid="uid://bs4ataie6hgjs" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://dgtw6g5qo6uwi" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://b4w84537u8r5w" path="res://assets/sprites/effects/fonteff.png" id="2_ekxnf"]
 
 [node name="MainMenu" type="Node2D" unique_id=1735975358]
 script = ExtResource("1_l6cm7")
@@ -28,23 +29,28 @@ theme_override_constants/separation = 30
 
 [node name="Jogar" type="Button" parent="Button_Manager/VBoxContainer" unique_id=773909714]
 layout_mode = 2
-text = "Jogar"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+text = "JOGAR"
 
 [node name="Opções" type="Button" parent="Button_Manager/VBoxContainer" unique_id=491200159]
 layout_mode = 2
-text = "Opções"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+text = "OPCOES"
 
 [node name="Sair" type="Button" parent="Button_Manager/VBoxContainer" unique_id=1974948117]
 layout_mode = 2
-text = "Sair"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+text = "SAIR"
 
 [node name="Creditos" type="Button" parent="Button_Manager/VBoxContainer" unique_id=456129629]
 layout_mode = 2
-text = "Creditos"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+text = "CREDITOS"
 
 [node name="Treinamento" type="Button" parent="Button_Manager/VBoxContainer" unique_id=1133995364]
 layout_mode = 2
-text = "Treinamento"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+text = "TREINAMENTO"
 
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Button_Manager/VBoxContainer/Opções" to="." method="_on_opções_pressed"]

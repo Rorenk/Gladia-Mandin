@@ -30,6 +30,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="." unique_id=663756655]
+visible = false
 offset_left = 17.000002
 offset_top = 14.999997
 offset_right = 85.4241
