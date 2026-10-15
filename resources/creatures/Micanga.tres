@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://b7asfg5neuyil"]
 
-[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_8blhn"]
-[ext_resource type="Texture2D" uid="uid://cy5p3hbrf56j3" path="res://assets/sprites/creatures/fumiga_estagio_2.png" id="2_1kdun"]
-[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_58sxn"]
-[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_5inaw"]
+[ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_0it6p"]
+[ext_resource type="Texture2D" uid="uid://cy5p3hbrf56j3" path="res://assets/sprites/creatures/fumiga_estagio_2.png" id="2_12fqc"]
+[ext_resource type="Script" uid="uid://cq26uefm0qhsr" path="res://scripts/resource/creature_resource.gd" id="3_pdymy"]
+[ext_resource type="Resource" uid="uid://gt28sn76u1og" path="res://resources/abilities/skills/skill_teste.tres" id="4_sfe87"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3cewb"]
-atlas = ExtResource("2_1kdun")
+atlas = ExtResource("2_12fqc")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pscaj"]
@@ -21,9 +21,9 @@ animations = [{
 }]
 
 [resource]
-script = ExtResource("3_58sxn")
-basic_attack = ExtResource("1_8blhn")
-special_skill = ExtResource("4_5inaw")
+script = ExtResource("3_pdymy")
+basic_attack = ExtResource("1_0it6p")
+special_skill = ExtResource("4_sfe87")
 creature_sprite_sheet = SubResource("SpriteFrames_pscaj")
 creature_name = "Miçanga"
 creature_max_hp = 30
@@ -31,7 +31,7 @@ creature_attack = 5
 creature_defense = 5
 creature_special_attack = 5
 creature_special_defense = 5
-creature_speed = 50
+creature_speed = 30
 creature_luck = 20
 creature_form = 2
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"

@@ -52,6 +52,6 @@ creature_attack = 10
 creature_defense = 10
 creature_special_attack = 10
 creature_special_defense = 10
-creature_speed = 80
+creature_speed = 30
 creature_form = 1
 metadata/_custom_type_script = "uid://cq26uefm0qhsr"
