@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://b7asfg5neuyil"]
+[gd_resource type="Resource" script_class="CreatureResource" format=3 uid="uid://d3n5cpio08xjv"]
 
 [ext_resource type="Resource" uid="uid://dive66d8lf1on" path="res://resources/abilities/attack/soco.tres" id="1_8blhn"]
 [ext_resource type="Texture2D" uid="uid://cy5p3hbrf56j3" path="res://assets/sprites/creatures/fumiga_estagio_2.png" id="2_1kdun"]
