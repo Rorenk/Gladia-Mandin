@@ -20,7 +20,7 @@ func create_visuals() -> void:
 	add_child(card_frame)
 	add_child(card_art)
 	
-	card_art.position = Vector2(0, 57)
+	card_art.position = Vector2(14, 12)
 	card_art.size = Vector2(32, 32)
 	
 	card_title.text = card_stats.card_name
@@ -29,17 +29,17 @@ func create_visuals() -> void:
 	add_child(card_title)
 	add_child(card_description)
 	
-	card_title.position = Vector2(40, 57)
+	card_title.position = Vector2(54, 12)
 	card_title.size = Vector2(32, 32)
 	
-	card_description.position = Vector2(120, 57)
+	card_description.position = Vector2(128, 12)
 	card_description.size = Vector2(128, 128)
 	
 	card_price.text = str(card_stats.card_price)
 	
 	add_child(card_price)
 	
-	card_price.position = Vector2(40, 80)
+	card_price.position = Vector2(54, 35)
 	card_price.size = Vector2(32, 32)
 
 # Called when the node enters the scene tree for the first time.
