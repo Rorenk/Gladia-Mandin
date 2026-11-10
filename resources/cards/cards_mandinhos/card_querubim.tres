@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://b36wga2na8mli"]
+
+[ext_resource type="Texture2D" uid="uid://2ldty5o8g0d0" path="res://assets/sprites/card_sprites/querubim_sprite_1.png" id="1_dgnvy"]
+[ext_resource type="Script" uid="uid://b81n3pv4uiqcp" path="res://scripts/resource/card_resource.gd" id="1_kbwv6"]
+[ext_resource type="Texture2D" uid="uid://84h2q6beg1wy" path="res://assets/sprites/card_sprites/cartao_grande1.png" id="2_mmlty"]
+
+[resource]
+script = ExtResource("1_kbwv6")
+card_art = ExtResource("1_dgnvy")
+card_frame = ExtResource("2_mmlty")
+card_name = "QUERUBIM"
+card_description = "uM MANDINHO COM ATAQUES A LONGA DISTANCIA"
+card_rarity = 1
+card_price = 5
+metadata/_custom_type_script = "uid://b81n3pv4uiqcp"

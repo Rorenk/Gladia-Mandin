@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://t5kga3ww70x6"]
+
+[ext_resource type="Texture2D" uid="uid://chrv1ew0rcsws" path="res://assets/sprites/card_sprites/serafim_sprite_1.png" id="1_l7iou"]
+[ext_resource type="Script" uid="uid://b81n3pv4uiqcp" path="res://scripts/resource/card_resource.gd" id="1_t1jcr"]
+[ext_resource type="Texture2D" uid="uid://84h2q6beg1wy" path="res://assets/sprites/card_sprites/cartao_grande1.png" id="2_lo8nb"]
+
+[resource]
+script = ExtResource("1_t1jcr")
+card_art = ExtResource("1_l7iou")
+card_frame = ExtResource("2_lo8nb")
+card_name = "SERAFIM"
+card_description = "UM MANDINHO COM ATAQUES EM AREA A LONGA DISTANCIA"
+card_rarity = 3
+card_price = 20
+metadata/_custom_type_script = "uid://b81n3pv4uiqcp"

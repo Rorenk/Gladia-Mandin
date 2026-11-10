@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://60lckww5anrp"]
+
+[ext_resource type="Texture2D" uid="uid://w0do0xgang06" path="res://assets/sprites/card_sprites/micanga_sprite_1.png" id="1_1behd"]
+[ext_resource type="Script" uid="uid://b81n3pv4uiqcp" path="res://scripts/resource/card_resource.gd" id="1_h62f0"]
+[ext_resource type="Texture2D" uid="uid://84h2q6beg1wy" path="res://assets/sprites/card_sprites/cartao_grande1.png" id="2_cjg5s"]
+
+[resource]
+script = ExtResource("1_h62f0")
+card_art = ExtResource("1_1behd")
+card_frame = ExtResource("2_cjg5s")
+card_name = "MIÇANGA"
+card_description = "UM MANDINHO COM DANO EM AREA A LONGA DISTANCIA"
+card_rarity = 3
+card_price = 20
+metadata/_custom_type_script = "uid://b81n3pv4uiqcp"

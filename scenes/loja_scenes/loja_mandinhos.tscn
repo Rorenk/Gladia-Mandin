@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://0sv8ryphwaid"]
+
+[ext_resource type="Script" uid="uid://m38cnulxkinc" path="res://scripts/scenes/loja_mandinhos.gd" id="1_61eif"]
+[ext_resource type="Texture2D" uid="uid://dfu3fhd55io2u" path="res://assets/sprites/tilesets/floorplaceholder.png" id="1_p5kyd"]
+[ext_resource type="Script" uid="uid://3ji41cx6a8mb" path="res://scripts/scenes/card.gd" id="3_vo52g"]
+[ext_resource type="Resource" uid="uid://l56l266p286y" path="res://resources/cards/cards_mandinhos/card_cebolita.tres" id="4_61eif"]
+
+[node name="Loja" type="Node2D" unique_id=1088900610]
+script = ExtResource("1_61eif")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1004778031]
+position = Vector2(322.5, 182.00002)
+scale = Vector2(2.5195313, 1.4218751)
+texture = ExtResource("1_p5kyd")
+
+[node name="Card_1" type="Node2D" parent="." unique_id=1655681852]
+position = Vector2(33, 92)
+script = ExtResource("3_vo52g")
+card_stats = ExtResource("4_61eif")
+metadata/_custom_type_script = "uid://3ji41cx6a8mb"
+
+[node name="Card_2" type="Node2D" parent="." unique_id=878235014]
+position = Vector2(348, 93)
+script = ExtResource("3_vo52g")
+card_stats = ExtResource("4_61eif")
+metadata/_custom_type_script = "uid://3ji41cx6a8mb"
+
+[node name="Card_3" type="Node2D" parent="." unique_id=945763090]
+position = Vector2(189, 208)
+script = ExtResource("3_vo52g")
+card_stats = ExtResource("4_61eif")
+metadata/_custom_type_script = "uid://3ji41cx6a8mb"
+
+[node name="Botao_mandinho" type="Button" parent="." unique_id=1956657932]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 184.0
+offset_bottom = 78.0
+mouse_default_cursor_shape = 2
+text = "MANDINHOS"
+
+[node name="Botao_itens" type="Button" parent="." unique_id=631846395]
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 391.0
+offset_bottom = 79.0
+mouse_default_cursor_shape = 2
+text = "ITENS"
+
+[node name="Botao_mobilia" type="Button" parent="." unique_id=288668992]
+offset_left = 429.0
+offset_top = 3.0
+offset_right = 609.0
+offset_bottom = 78.0
+mouse_default_cursor_shape = 2
+text = "MOBILIA"
+
+[connection signal="pressed" from="Botao_mandinho" to="." method="_on_botao_mandinho_pressed"]
+[connection signal="pressed" from="Botao_itens" to="." method="_on_botao_itens_pressed"]
+[connection signal="pressed" from="Botao_mobilia" to="." method="_on_botao_mobilia_pressed"]

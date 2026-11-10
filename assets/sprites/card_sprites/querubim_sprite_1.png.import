@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://84h2q6beg1wy"
-path="res://.godot/imported/cartao_grande1.png-3e3384bdae4ee2d3acdcb560f0557f4f.ctex"
+uid="uid://2ldty5o8g0d0"
+path="res://.godot/imported/querubim_sprite_1.png-1ffec2948494d376e55f97932266ae97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/hud/cartao_grande1.png"
-dest_files=["res://.godot/imported/cartao_grande1.png-3e3384bdae4ee2d3acdcb560f0557f4f.ctex"]
+source_file="res://assets/sprites/card_sprites/querubim_sprite_1.png"
+dest_files=["res://.godot/imported/querubim_sprite_1.png-1ffec2948494d376e55f97932266ae97.ctex"]
 
 [params]
 

@@ -41,7 +41,7 @@ func _ready() -> void:
 	anuncio.y_inimigo = 0.1
 	add_child(anuncio)  
 	await _intro(mapa, anuncio)
-	if MODO_TRAILER: _trailer_ligar()   # TRAILER
+	#if MODO_TRAILER: _trailer_ligar()   # TRAILER
 
 func _intro(mapa: MapaBase, anuncio: AnuncioCreature) -> void:
 	var cam: Camera2D = $Camera2D
